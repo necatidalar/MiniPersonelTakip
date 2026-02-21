@@ -1,5 +1,5 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using MiniPersonelTakip.Models;
+using MiniPersonelTakip.Services;
 
 namespace MiniPersonelTakip
 {
@@ -67,7 +67,7 @@ namespace MiniPersonelTakip
 
             int id = (int)dgvPersonel.CurrentRow.Cells["Id"].Value;
 
-            var frm = new FrmPersonelDuzenle(id);
+            var frm = new frm_PersonelDuzenle(id);
             frm.ShowDialog();
 
             Listele();

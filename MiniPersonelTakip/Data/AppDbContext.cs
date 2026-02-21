@@ -7,7 +7,7 @@ namespace MiniPersonelTakip.Data
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=MiniPersonelTakipDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=MiniPersonelTakipDB;Trusted_Connection=True;TrustServerCertificate=True;;");
         }
 
         public DbSet<Personel> Personeller { get; set; }

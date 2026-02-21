@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using MiniPersonelTakip.Models;
+using MiniPersonelTakip.Services;
 
 namespace MiniPersonelTakip
 {
@@ -12,7 +13,7 @@ namespace MiniPersonelTakip
             _personelId = personelId;
         }
 
-        private void FrmPersonelDuzenle_Load(object sender, EventArgs e)
+        private void frm_PersonelDuzenle_Load(object sender, EventArgs e)
         {
             var service = new PersonelService();
             var p = service.Getir(_personelId);
