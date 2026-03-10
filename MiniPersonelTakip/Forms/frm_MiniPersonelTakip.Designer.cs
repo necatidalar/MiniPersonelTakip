@@ -1,288 +1,276 @@
-﻿namespace MiniPersonelTakip
+﻿    namespace MiniPersonelTakip
 {
     partial class frm_MiniPersonelTakip
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && components != null)
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            dgvPersonel = new DataGridView();
-            btnKaydet = new Button();
+            pnlTop = new Panel();
+            cmbPozisyonFiltre = new ComboBox();
+            lblPozisyonFiltre = new Label();
+            cmbDepartmanFiltre = new ComboBox();
+            lblDepartmanFiltre = new Label();
+            btnAra = new Button();
+            chkSadeceAktifler = new CheckBox();
+            txtArama = new TextBox();
+            lblArama = new Label();
+            pnlRight = new Panel();
+            btnYenile = new Button();
             btnSil = new Button();
-            txtAd = new TextBox();
-            txtSoyad = new TextBox();
-            txtTckn = new TextBox();
-            txtTelefon = new TextBox();
-            dtpIseGiris = new DateTimePicker();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            personelBindingSource = new BindingSource(components);
-            ıdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            adDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            soyadDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tCKNDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            telefonDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            ıseGirisTarihiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            aktifMiDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dgvPersonel).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)personelBindingSource).BeginInit();
+            btnDuzenle = new Button();
+            btnEkle = new Button();
+            dgvPersoneller = new DataGridView();
+            pnlTop.SuspendLayout();
+            pnlRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPersoneller).BeginInit();
             SuspendLayout();
             // 
-            // dgvPersonel
+            // pnlTop
             // 
-            dgvPersonel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvPersonel.AutoGenerateColumns = false;
-            dgvPersonel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPersonel.BackgroundColor = SystemColors.ControlLight;
-            dgvPersonel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPersonel.Columns.AddRange(new DataGridViewColumn[] { ıdDataGridViewTextBoxColumn, adDataGridViewTextBoxColumn, soyadDataGridViewTextBoxColumn, tCKNDataGridViewTextBoxColumn, telefonDataGridViewTextBoxColumn, ıseGirisTarihiDataGridViewTextBoxColumn, aktifMiDataGridViewCheckBoxColumn });
-            dgvPersonel.DataSource = personelBindingSource;
-            dgvPersonel.Location = new Point(218, 59);
-            dgvPersonel.Name = "dgvPersonel";
-            dgvPersonel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPersonel.Size = new Size(590, 327);
-            dgvPersonel.TabIndex = 0;
-            dgvPersonel.CellDoubleClick += dgvPersonel_CellDoubleClick;
+            pnlTop.BackColor = Color.WhiteSmoke;
+            pnlTop.Controls.Add(cmbPozisyonFiltre);
+            pnlTop.Controls.Add(lblPozisyonFiltre);
+            pnlTop.Controls.Add(cmbDepartmanFiltre);
+            pnlTop.Controls.Add(lblDepartmanFiltre);
+            pnlTop.Controls.Add(btnAra);
+            pnlTop.Controls.Add(chkSadeceAktifler);
+            pnlTop.Controls.Add(txtArama);
+            pnlTop.Controls.Add(lblArama);
+            pnlTop.Dock = DockStyle.Top;
+            pnlTop.Location = new Point(0, 0);
+            pnlTop.Name = "pnlTop";
+            pnlTop.Size = new Size(1280, 74);
+            pnlTop.TabIndex = 0;
             // 
-            // btnKaydet
+            // cmbPozisyonFiltre
             // 
-            btnKaydet.BackColor = Color.FromArgb(46, 204, 113);
-            btnKaydet.FlatStyle = FlatStyle.Flat;
-            btnKaydet.Location = new Point(32, 310);
-            btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(180, 35);
-            btnKaydet.TabIndex = 1;
-            btnKaydet.Text = "Kaydet";
-            btnKaydet.UseVisualStyleBackColor = false;
-            btnKaydet.Click += btnKaydet_Click;
+            cmbPozisyonFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPozisyonFiltre.Font = new Font("Segoe UI", 10F);
+            cmbPozisyonFiltre.FormattingEnabled = true;
+            cmbPozisyonFiltre.Location = new Point(1083, 27);
+            cmbPozisyonFiltre.Name = "cmbPozisyonFiltre";
+            cmbPozisyonFiltre.Size = new Size(160, 25);
+            cmbPozisyonFiltre.TabIndex = 7;
+            cmbPozisyonFiltre.SelectedIndexChanged += cmbPozisyonFiltre_SelectedIndexChanged;
+            // 
+            // lblPozisyonFiltre
+            // 
+            lblPozisyonFiltre.AutoSize = true;
+            lblPozisyonFiltre.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblPozisyonFiltre.Location = new Point(1010, 31);
+            lblPozisyonFiltre.Name = "lblPozisyonFiltre";
+            lblPozisyonFiltre.Size = new Size(67, 19);
+            lblPozisyonFiltre.TabIndex = 6;
+            lblPozisyonFiltre.Text = "Pozisyon";
+            // 
+            // cmbDepartmanFiltre
+            // 
+            cmbDepartmanFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDepartmanFiltre.Font = new Font("Segoe UI", 10F);
+            cmbDepartmanFiltre.FormattingEnabled = true;
+            cmbDepartmanFiltre.Location = new Point(824, 27);
+            cmbDepartmanFiltre.Name = "cmbDepartmanFiltre";
+            cmbDepartmanFiltre.Size = new Size(160, 25);
+            cmbDepartmanFiltre.TabIndex = 5;
+            cmbDepartmanFiltre.SelectedIndexChanged += cmbDepartmanFiltre_SelectedIndexChanged;
+            // 
+            // lblDepartmanFiltre
+            // 
+            lblDepartmanFiltre.AutoSize = true;
+            lblDepartmanFiltre.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblDepartmanFiltre.Location = new Point(735, 31);
+            lblDepartmanFiltre.Name = "lblDepartmanFiltre";
+            lblDepartmanFiltre.Size = new Size(83, 19);
+            lblDepartmanFiltre.TabIndex = 4;
+            lblDepartmanFiltre.Text = "Departman";
+            // 
+            // btnAra
+            // 
+            btnAra.BackColor = Color.FromArgb(52, 152, 219);
+            btnAra.FlatAppearance.BorderSize = 0;
+            btnAra.FlatStyle = FlatStyle.Flat;
+            btnAra.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnAra.ForeColor = Color.White;
+            btnAra.Location = new Point(433, 25);
+            btnAra.Name = "btnAra";
+            btnAra.Size = new Size(110, 32);
+            btnAra.TabIndex = 3;
+            btnAra.Text = "Ara";
+            btnAra.UseVisualStyleBackColor = false;
+            btnAra.Click += btnAra_Click;
+            // 
+            // chkSadeceAktifler
+            // 
+            chkSadeceAktifler.AutoSize = true;
+            chkSadeceAktifler.Checked = true;
+            chkSadeceAktifler.CheckState = CheckState.Checked;
+            chkSadeceAktifler.Font = new Font("Segoe UI", 10F);
+            chkSadeceAktifler.Location = new Point(570, 30);
+            chkSadeceAktifler.Name = "chkSadeceAktifler";
+            chkSadeceAktifler.Size = new Size(126, 23);
+            chkSadeceAktifler.TabIndex = 2;
+            chkSadeceAktifler.Text = "Sadece Aktifler";
+            chkSadeceAktifler.UseVisualStyleBackColor = true;
+            chkSadeceAktifler.CheckedChanged += chkSadeceAktifler_CheckedChanged;
+            // 
+            // txtArama
+            // 
+            txtArama.Font = new Font("Segoe UI", 10F);
+            txtArama.Location = new Point(94, 28);
+            txtArama.Name = "txtArama";
+            txtArama.PlaceholderText = "Ad, soyad, personel kodu, telefon, e-posta...";
+            txtArama.Size = new Size(321, 25);
+            txtArama.TabIndex = 1;
+            txtArama.TextChanged += txtArama_TextChanged;
+            // 
+            // lblArama
+            // 
+            lblArama.AutoSize = true;
+            lblArama.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblArama.Location = new Point(24, 31);
+            lblArama.Name = "lblArama";
+            lblArama.Size = new Size(49, 19);
+            lblArama.TabIndex = 0;
+            lblArama.Text = "Arama";
+            // 
+            // pnlRight
+            // 
+            pnlRight.BackColor = Color.WhiteSmoke;
+            pnlRight.Controls.Add(btnYenile);
+            pnlRight.Controls.Add(btnSil);
+            pnlRight.Controls.Add(btnDuzenle);
+            pnlRight.Controls.Add(btnEkle);
+            pnlRight.Dock = DockStyle.Right;
+            pnlRight.Location = new Point(1100, 74);
+            pnlRight.Name = "pnlRight";
+            pnlRight.Size = new Size(180, 647);
+            pnlRight.TabIndex = 1;
+            // 
+            // btnYenile
+            // 
+            btnYenile.BackColor = Color.FromArgb(52, 73, 94);
+            btnYenile.FlatAppearance.BorderSize = 0;
+            btnYenile.FlatStyle = FlatStyle.Flat;
+            btnYenile.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnYenile.ForeColor = Color.White;
+            btnYenile.Location = new Point(18, 212);
+            btnYenile.Name = "btnYenile";
+            btnYenile.Size = new Size(144, 40);
+            btnYenile.TabIndex = 3;
+            btnYenile.Text = "Yenile";
+            btnYenile.UseVisualStyleBackColor = false;
+            btnYenile.Click += btnYenile_Click;
             // 
             // btnSil
             // 
             btnSil.BackColor = Color.FromArgb(231, 76, 60);
+            btnSil.FlatAppearance.BorderSize = 0;
             btnSil.FlatStyle = FlatStyle.Flat;
-            btnSil.Location = new Point(32, 351);
+            btnSil.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSil.ForeColor = Color.White;
+            btnSil.Location = new Point(18, 157);
             btnSil.Name = "btnSil";
-            btnSil.Size = new Size(180, 35);
+            btnSil.Size = new Size(144, 40);
             btnSil.TabIndex = 2;
-            btnSil.Text = "Sil";
+            btnSil.Text = "Pasife Al";
             btnSil.UseVisualStyleBackColor = false;
             btnSil.Click += btnSil_Click;
             // 
-            // txtAd
+            // btnDuzenle
             // 
-            txtAd.Font = new Font("Segoe UI", 9.75F);
-            txtAd.Location = new Point(32, 81);
-            txtAd.Name = "txtAd";
-            txtAd.Size = new Size(180, 25);
-            txtAd.TabIndex = 3;
+            btnDuzenle.BackColor = Color.FromArgb(243, 156, 18);
+            btnDuzenle.FlatAppearance.BorderSize = 0;
+            btnDuzenle.FlatStyle = FlatStyle.Flat;
+            btnDuzenle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnDuzenle.ForeColor = Color.White;
+            btnDuzenle.Location = new Point(18, 102);
+            btnDuzenle.Name = "btnDuzenle";
+            btnDuzenle.Size = new Size(144, 40);
+            btnDuzenle.TabIndex = 1;
+            btnDuzenle.Text = "Düzenle";
+            btnDuzenle.UseVisualStyleBackColor = false;
+            btnDuzenle.Click += btnDuzenle_Click;
             // 
-            // txtSoyad
+            // btnEkle
             // 
-            txtSoyad.Font = new Font("Segoe UI", 9.75F);
-            txtSoyad.Location = new Point(32, 131);
-            txtSoyad.Name = "txtSoyad";
-            txtSoyad.Size = new Size(180, 25);
-            txtSoyad.TabIndex = 4;
+            btnEkle.BackColor = Color.FromArgb(46, 204, 113);
+            btnEkle.FlatAppearance.BorderSize = 0;
+            btnEkle.FlatStyle = FlatStyle.Flat;
+            btnEkle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnEkle.ForeColor = Color.White;
+            btnEkle.Location = new Point(18, 47);
+            btnEkle.Name = "btnEkle";
+            btnEkle.Size = new Size(144, 40);
+            btnEkle.TabIndex = 0;
+            btnEkle.Text = "Yeni Personel";
+            btnEkle.UseVisualStyleBackColor = false;
+            btnEkle.Click += btnEkle_Click;
             // 
-            // txtTckn
+            // dgvPersoneller
             // 
-            txtTckn.Font = new Font("Segoe UI", 9.75F);
-            txtTckn.Location = new Point(32, 181);
-            txtTckn.Name = "txtTckn";
-            txtTckn.Size = new Size(180, 25);
-            txtTckn.TabIndex = 5;
-            // 
-            // txtTelefon
-            // 
-            txtTelefon.Font = new Font("Segoe UI", 9.75F);
-            txtTelefon.Location = new Point(32, 231);
-            txtTelefon.Name = "txtTelefon";
-            txtTelefon.Size = new Size(180, 25);
-            txtTelefon.TabIndex = 6;
-            // 
-            // dtpIseGiris
-            // 
-            dtpIseGiris.Location = new Point(32, 281);
-            dtpIseGiris.Name = "dtpIseGiris";
-            dtpIseGiris.Size = new Size(180, 23);
-            dtpIseGiris.TabIndex = 7;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(32, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(26, 19);
-            label1.TabIndex = 8;
-            label1.Text = "Ad";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(32, 109);
-            label2.Name = "label2";
-            label2.Size = new Size(46, 19);
-            label2.TabIndex = 9;
-            label2.Text = "Soyad";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(32, 159);
-            label3.Name = "label3";
-            label3.Size = new Size(86, 19);
-            label3.TabIndex = 10;
-            label3.Text = "TC Kimlik No";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(32, 209);
-            label4.Name = "label4";
-            label4.Size = new Size(52, 19);
-            label4.TabIndex = 11;
-            label4.Text = "Telefon";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(32, 259);
-            label5.Name = "label5";
-            label5.Size = new Size(92, 19);
-            label5.TabIndex = 12;
-            label5.Text = "İşe Giriş Tarihi";
-            // 
-            // personelBindingSource
-            // 
-            personelBindingSource.DataSource = typeof(Models.Personel);
-            // 
-            // ıdDataGridViewTextBoxColumn
-            // 
-            ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            ıdDataGridViewTextBoxColumn.HeaderText = "Id";
-            ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
-            ıdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // adDataGridViewTextBoxColumn
-            // 
-            adDataGridViewTextBoxColumn.DataPropertyName = "Ad";
-            adDataGridViewTextBoxColumn.HeaderText = "Ad";
-            adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
-            // 
-            // soyadDataGridViewTextBoxColumn
-            // 
-            soyadDataGridViewTextBoxColumn.DataPropertyName = "Soyad";
-            soyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
-            soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
-            // 
-            // tCKNDataGridViewTextBoxColumn
-            // 
-            tCKNDataGridViewTextBoxColumn.DataPropertyName = "TCKN";
-            tCKNDataGridViewTextBoxColumn.HeaderText = "TCKN";
-            tCKNDataGridViewTextBoxColumn.Name = "tCKNDataGridViewTextBoxColumn";
-            // 
-            // telefonDataGridViewTextBoxColumn
-            // 
-            telefonDataGridViewTextBoxColumn.DataPropertyName = "Telefon";
-            telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
-            telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
-            // 
-            // ıseGirisTarihiDataGridViewTextBoxColumn
-            // 
-            ıseGirisTarihiDataGridViewTextBoxColumn.DataPropertyName = "IseGirisTarihi";
-            ıseGirisTarihiDataGridViewTextBoxColumn.HeaderText = "İşe Giriş Tarihi";
-            ıseGirisTarihiDataGridViewTextBoxColumn.Name = "ıseGirisTarihiDataGridViewTextBoxColumn";
-            // 
-            // aktifMiDataGridViewCheckBoxColumn
-            // 
-            aktifMiDataGridViewCheckBoxColumn.DataPropertyName = "AktifMi";
-            aktifMiDataGridViewCheckBoxColumn.HeaderText = "AktifMi";
-            aktifMiDataGridViewCheckBoxColumn.Name = "aktifMiDataGridViewCheckBoxColumn";
-            aktifMiDataGridViewCheckBoxColumn.Visible = false;
+            dgvPersoneller.AllowUserToAddRows = false;
+            dgvPersoneller.AllowUserToDeleteRows = false;
+            dgvPersoneller.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvPersoneller.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPersoneller.BackgroundColor = Color.White;
+            dgvPersoneller.BorderStyle = BorderStyle.None;
+            dgvPersoneller.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPersoneller.Location = new Point(24, 96);
+            dgvPersoneller.MultiSelect = false;
+            dgvPersoneller.Name = "dgvPersoneller";
+            dgvPersoneller.ReadOnly = true;
+            dgvPersoneller.RowHeadersWidth = 51;
+            dgvPersoneller.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPersoneller.Size = new Size(1052, 599);
+            dgvPersoneller.TabIndex = 2;
+            dgvPersoneller.CellDoubleClick += dgvPersoneller_CellDoubleClick;
             // 
             // frm_MiniPersonelTakip
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(827, 401);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(dtpIseGiris);
-            Controls.Add(txtTelefon);
-            Controls.Add(txtTckn);
-            Controls.Add(txtSoyad);
-            Controls.Add(txtAd);
-            Controls.Add(btnSil);
-            Controls.Add(btnKaydet);
-            Controls.Add(dgvPersonel);
-            Margin = new Padding(4, 3, 4, 3);
+            BackColor = Color.FromArgb(245, 247, 250);
+            ClientSize = new Size(1280, 721);
+            Controls.Add(dgvPersoneller);
+            Controls.Add(pnlRight);
+            Controls.Add(pnlTop);
+            MinimumSize = new Size(1200, 700);
             Name = "frm_MiniPersonelTakip";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Personel Takip";
+            Text = "Personel Yönetimi";
             Load += frm_MiniPersonelTakip_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvPersonel).EndInit();
-            ((System.ComponentModel.ISupportInitialize)personelBindingSource).EndInit();
+            pnlTop.ResumeLayout(false);
+            pnlTop.PerformLayout();
+            pnlRight.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvPersoneller).EndInit();
             ResumeLayout(false);
-            PerformLayout();
-
         }
 
-        #endregion
-
-        private DataGridView dgvPersonel;
-        private Button btnKaydet;
+        private Panel pnlTop;
+        private ComboBox cmbPozisyonFiltre;
+        private Label lblPozisyonFiltre;
+        private ComboBox cmbDepartmanFiltre;
+        private Label lblDepartmanFiltre;
+        private Button btnAra;
+        private CheckBox chkSadeceAktifler;
+        private TextBox txtArama;
+        private Label lblArama;
+        private Panel pnlRight;
+        private Button btnYenile;
         private Button btnSil;
-        private TextBox txtAd;
-        private TextBox txtSoyad;
-        private TextBox txtTckn;
-        private TextBox txtTelefon;
-        private DateTimePicker dtpIseGiris;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private DataGridViewTextBoxColumn ıdDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tCKNDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn ıseGirisTarihiDataGridViewTextBoxColumn;
-        private DataGridViewCheckBoxColumn aktifMiDataGridViewCheckBoxColumn;
-        private BindingSource personelBindingSource;
+        private Button btnDuzenle;
+        private Button btnEkle;
+        private DataGridView dgvPersoneller;
     }
 }
