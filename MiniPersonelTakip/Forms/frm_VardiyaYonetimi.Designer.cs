@@ -16,6 +16,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_VardiyaYonetimi));
             pnlTop = new Panel();
             btnAra = new Button();
             cmbDurumFiltre = new ComboBox();
@@ -112,7 +113,7 @@
             lblVardiyaTipi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblVardiyaTipi.Location = new Point(647, 34);
             lblVardiyaTipi.Name = "lblVardiyaTipi";
-            lblVardiyaTipi.Size = new Size(91, 19);
+            lblVardiyaTipi.Size = new Size(89, 19);
             lblVardiyaTipi.TabIndex = 6;
             lblVardiyaTipi.Text = "Vardiya Tipi";
             // 
@@ -132,7 +133,7 @@
             lblBitis.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblBitis.Location = new Point(480, 34);
             lblBitis.Name = "lblBitis";
-            lblBitis.Size = new Size(35, 19);
+            lblBitis.Size = new Size(37, 19);
             lblBitis.TabIndex = 4;
             lblBitis.Text = "Bitiş";
             // 
@@ -173,7 +174,7 @@
             lblPersonel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblPersonel.Location = new Point(24, 34);
             lblPersonel.Name = "lblPersonel";
-            lblPersonel.Size = new Size(61, 19);
+            lblPersonel.Size = new Size(67, 19);
             lblPersonel.TabIndex = 0;
             lblPersonel.Text = "Personel";
             // 
@@ -271,6 +272,7 @@
             Controls.Add(dgvVardiyalar);
             Controls.Add(pnlRight);
             Controls.Add(pnlTop);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(1300, 700);
             Name = "frm_VardiyaYonetimi";
             StartPosition = FormStartPosition.CenterScreen;

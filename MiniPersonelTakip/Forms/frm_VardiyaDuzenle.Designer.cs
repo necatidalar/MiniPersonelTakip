@@ -15,6 +15,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_VardiyaDuzenle));
             lblPersonel = new Label();
             cmbPersonel = new ComboBox();
             lblTarih = new Label();
@@ -44,7 +45,7 @@
             lblPersonel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblPersonel.Location = new Point(28, 22);
             lblPersonel.Name = "lblPersonel";
-            lblPersonel.Size = new Size(61, 19);
+            lblPersonel.Size = new Size(67, 19);
             lblPersonel.TabIndex = 0;
             lblPersonel.Text = "Personel";
             // 
@@ -83,7 +84,7 @@
             lblPlanlananGiris.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblPlanlananGiris.Location = new Point(28, 146);
             lblPlanlananGiris.Name = "lblPlanlananGiris";
-            lblPlanlananGiris.Size = new Size(111, 19);
+            lblPlanlananGiris.Size = new Size(108, 19);
             lblPlanlananGiris.TabIndex = 4;
             lblPlanlananGiris.Text = "Planlanan Giriş";
             // 
@@ -101,7 +102,7 @@
             lblPlanlananCikis.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblPlanlananCikis.Location = new Point(28, 208);
             lblPlanlananCikis.Name = "lblPlanlananCikis";
-            lblPlanlananCikis.Size = new Size(113, 19);
+            lblPlanlananCikis.Size = new Size(109, 19);
             lblPlanlananCikis.TabIndex = 6;
             lblPlanlananCikis.Text = "Planlanan Çıkış";
             // 
@@ -119,7 +120,7 @@
             chkGercekSaatlerGirilsin.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             chkGercekSaatlerGirilsin.Location = new Point(28, 274);
             chkGercekSaatlerGirilsin.Name = "chkGercekSaatlerGirilsin";
-            chkGercekSaatlerGirilsin.Size = new Size(158, 23);
+            chkGercekSaatlerGirilsin.Size = new Size(176, 23);
             chkGercekSaatlerGirilsin.TabIndex = 8;
             chkGercekSaatlerGirilsin.Text = "Gerçek Saatler Girilsin";
             chkGercekSaatlerGirilsin.UseVisualStyleBackColor = true;
@@ -131,7 +132,7 @@
             lblGercekGiris.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblGercekGiris.Location = new Point(28, 312);
             lblGercekGiris.Name = "lblGercekGiris";
-            lblGercekGiris.Size = new Size(89, 19);
+            lblGercekGiris.Size = new Size(90, 19);
             lblGercekGiris.TabIndex = 9;
             lblGercekGiris.Text = "Gerçek Giriş";
             // 
@@ -167,7 +168,7 @@
             lblVardiyaTipi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblVardiyaTipi.Location = new Point(28, 436);
             lblVardiyaTipi.Name = "lblVardiyaTipi";
-            lblVardiyaTipi.Size = new Size(91, 19);
+            lblVardiyaTipi.Size = new Size(89, 19);
             lblVardiyaTipi.TabIndex = 13;
             lblVardiyaTipi.Text = "Vardiya Tipi";
             // 
@@ -207,7 +208,7 @@
             lblAciklama.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblAciklama.Location = new Point(28, 560);
             lblAciklama.Name = "lblAciklama";
-            lblAciklama.Size = new Size(69, 19);
+            lblAciklama.Size = new Size(71, 19);
             lblAciklama.TabIndex = 17;
             lblAciklama.Text = "Açıklama";
             // 
@@ -279,6 +280,7 @@
             Controls.Add(cmbPersonel);
             Controls.Add(lblPersonel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frm_VardiyaDuzenle";

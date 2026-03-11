@@ -24,6 +24,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PersonelDuzenle));
             lblPersonelKod = new Label();
             txtPersonelKod = new TextBox();
             lblAd = new Label();
@@ -283,6 +284,7 @@
             Controls.Add(cmbDepartman);
             Controls.Add(cmbPozisyon);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frm_PersonelDuzenle";

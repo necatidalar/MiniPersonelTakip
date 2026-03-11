@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using MiniPersonelTakip.Forms;
 
 namespace MiniPersonelTakip
 {
@@ -29,6 +30,23 @@ namespace MiniPersonelTakip
                     MessageBoxIcon.Error);
             }
         }
+        private void btnGorevYonetimi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using var scope = _serviceProvider.CreateScope();
+                var form = scope.ServiceProvider.GetRequiredService<frm_GorevYonetimi>();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Görev yönetimi ekranı açılırken hata oluştu.\n\nDetay: {ex.Message}",
+                    "Hata",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
 
         private void btnVardiyaYonetimi_Click(object sender, EventArgs e)
         {
@@ -42,6 +60,24 @@ namespace MiniPersonelTakip
             {
                 MessageBox.Show(
                     $"Vardiya yönetimi ekranı açılırken hata oluştu.\n\nDetay: {ex.Message}",
+                    "Hata",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnIzinYonetimi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using var scope = _serviceProvider.CreateScope();
+                var form = scope.ServiceProvider.GetRequiredService<frm_IzinYonetimi>();
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"İzin yönetimi ekranı açılırken hata oluştu.\n\nDetay: {ex.Message}",
                     "Hata",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

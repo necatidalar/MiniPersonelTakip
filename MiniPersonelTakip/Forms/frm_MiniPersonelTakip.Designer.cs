@@ -16,6 +16,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MiniPersonelTakip));
             pnlTop = new Panel();
             cmbPozisyonFiltre = new ComboBox();
             lblPozisyonFiltre = new Label();
@@ -70,7 +71,7 @@
             lblPozisyonFiltre.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblPozisyonFiltre.Location = new Point(1010, 31);
             lblPozisyonFiltre.Name = "lblPozisyonFiltre";
-            lblPozisyonFiltre.Size = new Size(67, 19);
+            lblPozisyonFiltre.Size = new Size(69, 19);
             lblPozisyonFiltre.TabIndex = 6;
             lblPozisyonFiltre.Text = "Pozisyon";
             // 
@@ -91,7 +92,7 @@
             lblDepartmanFiltre.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblDepartmanFiltre.Location = new Point(735, 31);
             lblDepartmanFiltre.Name = "lblDepartmanFiltre";
-            lblDepartmanFiltre.Size = new Size(83, 19);
+            lblDepartmanFiltre.Size = new Size(84, 19);
             lblDepartmanFiltre.TabIndex = 4;
             lblDepartmanFiltre.Text = "Departman";
             // 
@@ -118,7 +119,7 @@
             chkSadeceAktifler.Font = new Font("Segoe UI", 10F);
             chkSadeceAktifler.Location = new Point(570, 30);
             chkSadeceAktifler.Name = "chkSadeceAktifler";
-            chkSadeceAktifler.Size = new Size(126, 23);
+            chkSadeceAktifler.Size = new Size(117, 23);
             chkSadeceAktifler.TabIndex = 2;
             chkSadeceAktifler.Text = "Sadece Aktifler";
             chkSadeceAktifler.UseVisualStyleBackColor = true;
@@ -140,7 +141,7 @@
             lblArama.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblArama.Location = new Point(24, 31);
             lblArama.Name = "lblArama";
-            lblArama.Size = new Size(49, 19);
+            lblArama.Size = new Size(54, 19);
             lblArama.TabIndex = 0;
             lblArama.Text = "Arama";
             // 
@@ -245,6 +246,7 @@
             Controls.Add(dgvPersoneller);
             Controls.Add(pnlRight);
             Controls.Add(pnlTop);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(1200, 700);
             Name = "frm_MiniPersonelTakip";
             StartPosition = FormStartPosition.CenterScreen;

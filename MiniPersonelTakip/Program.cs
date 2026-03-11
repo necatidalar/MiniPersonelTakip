@@ -6,6 +6,7 @@ using MiniPersonelTakip.Repositories.Abstract;
 using MiniPersonelTakip.Repositories.Concrete;
 using MiniPersonelTakip.Services.Abstract;
 using MiniPersonelTakip.Services.Concrete;
+using MiniPersonelTakip.Forms;
 
 namespace MiniPersonelTakip
 {
@@ -19,22 +20,30 @@ namespace MiniPersonelTakip
             var builder = Host.CreateApplicationBuilder();
 
             builder.Services.AddDbContext<AppDbContext>(options =>
-                           options.UseSqlServer("Server=DALAR;Database=PersonelTakipDB;User Id=sa;Password=Nd200528;Trusted_Connection=True; TrustServerCertificate=True;"));
+                options.UseSqlServer("Server=DALAR;Database=PersonelTakipDB;User Id=sa;Password=Nd200528;Trusted_Connection=True; TrustServerCertificate=True;"));
 
             builder.Services.AddScoped<IPersonelRepository, PersonelRepository>();
             builder.Services.AddScoped<IDepartmanRepository, DepartmanRepository>();
             builder.Services.AddScoped<IPozisyonRepository, PozisyonRepository>();
             builder.Services.AddScoped<IVardiyaRepository, VardiyaRepository>();
+            builder.Services.AddScoped<IIzinRepository, IzinRepository>();
+            builder.Services.AddScoped<IGorevRepository, GorevRepository>();
 
             builder.Services.AddScoped<IPersonelService, PersonelService>();
             builder.Services.AddScoped<ILookupService, LookupService>();
             builder.Services.AddScoped<IVardiyaService, VardiyaService>();
+            builder.Services.AddScoped<IIzinService, IzinService>();
+            builder.Services.AddScoped<IGorevService, GorevService>();
 
             builder.Services.AddTransient<frmMain>();
             builder.Services.AddTransient<frm_MiniPersonelTakip>();
             builder.Services.AddTransient<frm_PersonelDuzenle>();
             builder.Services.AddTransient<frm_VardiyaYonetimi>();
             builder.Services.AddTransient<frm_VardiyaDuzenle>();
+            builder.Services.AddTransient<frm_IzinYonetimi>();
+            builder.Services.AddTransient<frm_IzinDuzenle>();
+            builder.Services.AddTransient<frm_GorevYonetimi>();
+            builder.Services.AddTransient<frm_GorevDuzenle>();
 
             using var host = builder.Build();
 

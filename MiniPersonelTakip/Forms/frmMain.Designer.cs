@@ -16,9 +16,12 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             lblBaslik = new Label();
             btnPersonelYonetimi = new Button();
             btnVardiyaYonetimi = new Button();
+            btnIzinYonetimi = new Button();
+            btnGorevYonetimi = new Button();
             SuspendLayout();
             // 
             // lblBaslik
@@ -27,7 +30,7 @@
             lblBaslik.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             lblBaslik.Location = new Point(38, 29);
             lblBaslik.Name = "lblBaslik";
-            lblBaslik.Size = new Size(258, 30);
+            lblBaslik.Size = new Size(243, 30);
             lblBaslik.TabIndex = 0;
             lblBaslik.Text = "Personel Takip Sistemi";
             // 
@@ -61,16 +64,49 @@
             btnVardiyaYonetimi.UseVisualStyleBackColor = false;
             btnVardiyaYonetimi.Click += btnVardiyaYonetimi_Click;
             // 
+            // btnIzinYonetimi
+            // 
+            btnIzinYonetimi.BackColor = Color.FromArgb(155, 89, 182);
+            btnIzinYonetimi.FlatAppearance.BorderSize = 0;
+            btnIzinYonetimi.FlatStyle = FlatStyle.Flat;
+            btnIzinYonetimi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnIzinYonetimi.ForeColor = Color.White;
+            btnIzinYonetimi.Location = new Point(42, 220);
+            btnIzinYonetimi.Name = "btnIzinYonetimi";
+            btnIzinYonetimi.Size = new Size(240, 48);
+            btnIzinYonetimi.TabIndex = 3;
+            btnIzinYonetimi.Text = "İzin Yönetimi";
+            btnIzinYonetimi.UseVisualStyleBackColor = false;
+            btnIzinYonetimi.Click += btnIzinYonetimi_Click;
+            // 
+            // btnGorevYonetimi
+            // 
+            btnGorevYonetimi.BackColor = Color.FromArgb(241, 196, 15);
+            btnGorevYonetimi.FlatAppearance.BorderSize = 0;
+            btnGorevYonetimi.FlatStyle = FlatStyle.Flat;
+            btnGorevYonetimi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnGorevYonetimi.ForeColor = Color.White;
+            btnGorevYonetimi.Location = new Point(42, 284);
+            btnGorevYonetimi.Name = "btnGorevYonetimi";
+            btnGorevYonetimi.Size = new Size(240, 48);
+            btnGorevYonetimi.TabIndex = 4;
+            btnGorevYonetimi.Text = "Görev Yönetimi";
+            btnGorevYonetimi.UseVisualStyleBackColor = false;
+            btnGorevYonetimi.Click += btnGorevYonetimi_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(329, 254);
+            ClientSize = new Size(329, 370);
+            Controls.Add(btnIzinYonetimi);
             Controls.Add(btnVardiyaYonetimi);
             Controls.Add(btnPersonelYonetimi);
+            Controls.Add(btnGorevYonetimi);
             Controls.Add(lblBaslik);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmMain";
@@ -83,5 +119,7 @@
         private Label lblBaslik;
         private Button btnPersonelYonetimi;
         private Button btnVardiyaYonetimi;
+        private Button btnIzinYonetimi;
+        private Button btnGorevYonetimi;
     }
 }
