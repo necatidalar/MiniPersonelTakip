@@ -66,6 +66,7 @@ namespace MiniPersonelTakip
             // 
             lblPersonelKod.AutoSize = true;
             lblPersonelKod.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblPersonelKod.ForeColor = Color.FromArgb(170, 175, 185);
             lblPersonelKod.Location = new Point(32, 28);
             lblPersonelKod.Name = "lblPersonelKod";
             lblPersonelKod.Size = new Size(106, 19);
@@ -74,7 +75,10 @@ namespace MiniPersonelTakip
             // 
             // txtPersonelKod
             // 
+            txtPersonelKod.BackColor = Color.FromArgb(35, 38, 45);
+            txtPersonelKod.BorderStyle = BorderStyle.FixedSingle;
             txtPersonelKod.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtPersonelKod.ForeColor = Color.White;
             txtPersonelKod.Location = new Point(32, 50);
             txtPersonelKod.Name = "txtPersonelKod";
             txtPersonelKod.Size = new Size(320, 25);
@@ -84,6 +88,7 @@ namespace MiniPersonelTakip
             // 
             lblAd.AutoSize = true;
             lblAd.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblAd.ForeColor = Color.FromArgb(170, 175, 185);
             lblAd.Location = new Point(32, 92);
             lblAd.Name = "lblAd";
             lblAd.Size = new Size(28, 19);
@@ -92,7 +97,10 @@ namespace MiniPersonelTakip
             // 
             // txtAd
             // 
+            txtAd.BackColor = Color.FromArgb(35, 38, 45);
+            txtAd.BorderStyle = BorderStyle.FixedSingle;
             txtAd.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtAd.ForeColor = Color.White;
             txtAd.Location = new Point(32, 114);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(320, 25);
@@ -102,6 +110,7 @@ namespace MiniPersonelTakip
             // 
             lblSoyad.AutoSize = true;
             lblSoyad.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblSoyad.ForeColor = Color.FromArgb(170, 175, 185);
             lblSoyad.Location = new Point(390, 92);
             lblSoyad.Name = "lblSoyad";
             lblSoyad.Size = new Size(51, 19);
@@ -110,7 +119,10 @@ namespace MiniPersonelTakip
             // 
             // txtSoyad
             // 
+            txtSoyad.BackColor = Color.FromArgb(35, 38, 45);
+            txtSoyad.BorderStyle = BorderStyle.FixedSingle;
             txtSoyad.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtSoyad.ForeColor = Color.White;
             txtSoyad.Location = new Point(390, 114);
             txtSoyad.Name = "txtSoyad";
             txtSoyad.Size = new Size(338, 25);
@@ -120,16 +132,20 @@ namespace MiniPersonelTakip
             // 
             lblDepartman.AutoSize = true;
             lblDepartman.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblDepartman.ForeColor = Color.FromArgb(170, 175, 185);
             lblDepartman.Location = new Point(32, 156);
             lblDepartman.Name = "lblDepartman";
-            lblDepartman.Size = new Size(100, 19);
+            lblDepartman.Size = new Size(84, 19);
             lblDepartman.TabIndex = 6;
             lblDepartman.Text = "Departman";
             // 
             // cmbDepartman
             // 
+            cmbDepartman.BackColor = Color.FromArgb(35, 38, 45);
             cmbDepartman.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDepartman.FlatStyle = FlatStyle.Flat;
             cmbDepartman.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbDepartman.ForeColor = Color.White;
             cmbDepartman.FormattingEnabled = true;
             cmbDepartman.Location = new Point(32, 178);
             cmbDepartman.Name = "cmbDepartman";
@@ -140,16 +156,20 @@ namespace MiniPersonelTakip
             // 
             lblPozisyon.AutoSize = true;
             lblPozisyon.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblPozisyon.ForeColor = Color.FromArgb(170, 175, 185);
             lblPozisyon.Location = new Point(390, 156);
             lblPozisyon.Name = "lblPozisyon";
-            lblPozisyon.Size = new Size(84, 19);
+            lblPozisyon.Size = new Size(69, 19);
             lblPozisyon.TabIndex = 8;
             lblPozisyon.Text = "Pozisyon";
             // 
             // cmbPozisyon
             // 
+            cmbPozisyon.BackColor = Color.FromArgb(35, 38, 45);
             cmbPozisyon.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPozisyon.FlatStyle = FlatStyle.Flat;
             cmbPozisyon.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbPozisyon.ForeColor = Color.White;
             cmbPozisyon.FormattingEnabled = true;
             cmbPozisyon.Location = new Point(390, 178);
             cmbPozisyon.Name = "cmbPozisyon";
@@ -160,15 +180,19 @@ namespace MiniPersonelTakip
             // 
             lblTelefon.AutoSize = true;
             lblTelefon.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblTelefon.ForeColor = Color.FromArgb(170, 175, 185);
             lblTelefon.Location = new Point(32, 220);
             lblTelefon.Name = "lblTelefon";
-            lblTelefon.Size = new Size(67, 19);
+            lblTelefon.Size = new Size(58, 19);
             lblTelefon.TabIndex = 10;
             lblTelefon.Text = "Telefon";
             // 
             // txtTelefon
             // 
+            txtTelefon.BackColor = Color.FromArgb(35, 38, 45);
+            txtTelefon.BorderStyle = BorderStyle.FixedSingle;
             txtTelefon.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtTelefon.ForeColor = Color.White;
             txtTelefon.Location = new Point(32, 242);
             txtTelefon.Name = "txtTelefon";
             txtTelefon.Size = new Size(320, 25);
@@ -178,15 +202,19 @@ namespace MiniPersonelTakip
             // 
             lblEposta.AutoSize = true;
             lblEposta.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblEposta.ForeColor = Color.FromArgb(170, 175, 185);
             lblEposta.Location = new Point(390, 220);
             lblEposta.Name = "lblEposta";
-            lblEposta.Size = new Size(68, 19);
+            lblEposta.Size = new Size(59, 19);
             lblEposta.TabIndex = 12;
             lblEposta.Text = "E-Posta";
             // 
             // txtEposta
             // 
+            txtEposta.BackColor = Color.FromArgb(35, 38, 45);
+            txtEposta.BorderStyle = BorderStyle.FixedSingle;
             txtEposta.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtEposta.ForeColor = Color.White;
             txtEposta.Location = new Point(390, 242);
             txtEposta.Name = "txtEposta";
             txtEposta.Size = new Size(338, 25);
@@ -196,16 +224,20 @@ namespace MiniPersonelTakip
             // 
             lblAdres.AutoSize = true;
             lblAdres.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblAdres.ForeColor = Color.FromArgb(170, 175, 185);
             lblAdres.Location = new Point(32, 284);
             lblAdres.Name = "lblAdres";
-            lblAdres.Size = new Size(55, 19);
+            lblAdres.Size = new Size(48, 19);
             lblAdres.TabIndex = 14;
             lblAdres.Text = "Adres";
             // 
             // txtAdres
             // 
             txtAdres.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtAdres.BackColor = Color.FromArgb(35, 38, 45);
+            txtAdres.BorderStyle = BorderStyle.FixedSingle;
             txtAdres.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtAdres.ForeColor = Color.White;
             txtAdres.Location = new Point(32, 306);
             txtAdres.Multiline = true;
             txtAdres.Name = "txtAdres";
@@ -217,28 +249,30 @@ namespace MiniPersonelTakip
             // 
             lblIseGiris.AutoSize = true;
             lblIseGiris.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblIseGiris.ForeColor = Color.FromArgb(170, 175, 185);
             lblIseGiris.Location = new Point(32, 411);
             lblIseGiris.Name = "lblIseGiris";
-            lblIseGiris.Size = new Size(119, 19);
+            lblIseGiris.Size = new Size(102, 19);
             lblIseGiris.TabIndex = 16;
             lblIseGiris.Text = "İşe Giriş Tarihi";
             // 
             // dtpIseGirisTarihi
             // 
-            dtpIseGirisTarihi.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpIseGirisTarihi.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 162);
             dtpIseGirisTarihi.Format = DateTimePickerFormat.Short;
             dtpIseGirisTarihi.Location = new Point(32, 433);
             dtpIseGirisTarihi.Name = "dtpIseGirisTarihi";
-            dtpIseGirisTarihi.Size = new Size(170, 25);
+            dtpIseGirisTarihi.Size = new Size(170, 24);
             dtpIseGirisTarihi.TabIndex = 17;
             // 
             // chkAktifMi
             // 
             chkAktifMi.AutoSize = true;
             chkAktifMi.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            chkAktifMi.ForeColor = Color.FromArgb(170, 175, 185);
             chkAktifMi.Location = new Point(232, 433);
             chkAktifMi.Name = "chkAktifMi";
-            chkAktifMi.Size = new Size(81, 23);
+            chkAktifMi.Size = new Size(76, 23);
             chkAktifMi.TabIndex = 18;
             chkAktifMi.Text = "Aktif Mi";
             chkAktifMi.UseVisualStyleBackColor = true;
@@ -262,7 +296,7 @@ namespace MiniPersonelTakip
             // btnIptal
             // 
             btnIptal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnIptal.BackColor = Color.FromArgb(149, 165, 166);
+            btnIptal.BackColor = Color.FromArgb(44, 62, 80);
             btnIptal.FlatAppearance.BorderSize = 0;
             btnIptal.FlatStyle = FlatStyle.Flat;
             btnIptal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
@@ -279,7 +313,7 @@ namespace MiniPersonelTakip
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(760, 550);
             Controls.Add(btnIptal);
             Controls.Add(btnKaydet);

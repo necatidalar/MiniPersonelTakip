@@ -1,26 +1,38 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MiniPersonelTakip.Data;
+using MiniPersonelTakip.Forms;
 using MiniPersonelTakip.Repositories.Abstract;
 using MiniPersonelTakip.Repositories.Concrete;
 using MiniPersonelTakip.Services.Abstract;
 using MiniPersonelTakip.Services.Concrete;
-using MiniPersonelTakip.Forms;
 
 namespace MiniPersonelTakip
 {
     internal static class Program
     {
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             ApplicationConfiguration.Initialize();
 
             var builder = Host.CreateApplicationBuilder();
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            if (string.IsNullOrWhiteSpace(connectionString))
+            {
+                MessageBox.Show(
+                    "Bağlantı dizesi bulunamadı. appsettings.json içindeki DefaultConnection ayarını kontrol edin.",
+                    "Yapılandırma Hatası",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
 
             builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer("Server=DALAR;Database=Sude_PersonelTakipDB;User Id=DALAR;Password=Nd200528;Trusted_Connection=True; TrustServerCertificate=True;"));
+                options.UseSqlServer(connectionString));
 
             builder.Services.AddScoped<IPersonelRepository, PersonelRepository>();
             builder.Services.AddScoped<IDepartmanRepository, DepartmanRepository>();
@@ -36,7 +48,7 @@ namespace MiniPersonelTakip
             builder.Services.AddScoped<IGorevService, GorevService>();
 
             builder.Services.AddTransient<frmMain>();
-            builder.Services.AddTransient<frm_PersonelTakip>();
+            builder.Services.AddTransient<frm_PersonelYonetimi>();
             builder.Services.AddTransient<frm_PersonelDuzenle>();
             builder.Services.AddTransient<frm_VardiyaYonetimi>();
             builder.Services.AddTransient<frm_VardiyaDuzenle>();
@@ -47,8 +59,20 @@ namespace MiniPersonelTakip
 
             using var host = builder.Build();
 
-            var mainForm = host.Services.GetRequiredService<frmMain>();
-            Application.Run(mainForm);
+            try
+            {
+                using var scope = host.Services.CreateScope();
+                var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                dbContext.Database.EnsureCreated();
+
+                var mainForm = scope.ServiceProvider.GetRequiredService<frmMain>();
+                Application.Run(mainForm);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Uygulama başlatılırken hata oluştu. Detay:" +
+                    $"{ Helpers.ExceptionHelper.GetFullMessage(ex)} ", "Başlatma Hatası", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

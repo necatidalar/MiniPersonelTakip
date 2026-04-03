@@ -27,7 +27,6 @@ namespace MiniPersonelTakip.Forms
             _lookupService = lookupService;
             _serviceProvider = serviceProvider;
 
-            Load += frm_IzinYonetimi_Load;
             btnAra.Click += async (s, e) => await ListeleAsync();
             btnYenile.Click += btnYenile_Click;
             btnEkle.Click += btnEkle_Click;
@@ -75,20 +74,7 @@ namespace MiniPersonelTakip.Forms
 
         private async void frm_IzinYonetimi_Load(object? sender, EventArgs e)
         {
-            UiTheme.StylePage(this);
-            UiTheme.StyleSurface(pnlTop);
-            UiTheme.StyleGrid(dgvIzinler);
-
-            UiTheme.StyleTextBox(txtArama);
-            UiTheme.StyleComboBox(cmbPersonelFiltre);
-            UiTheme.StyleComboBox(cmbIzinTuruFiltre);
-            UiTheme.StyleComboBox(cmbDurumFiltre);
-
-            UiTheme.StylePrimaryButton(btnAra);
-            UiTheme.StyleNeutralButton(btnYenile);
-            UiTheme.StyleSuccessButton(btnEkle);
-            UiTheme.StyleWarningButton(btnDuzenle);
-            UiTheme.StyleDangerButton(btnSil);
+            DataGridThemeManager.Apply(dgvIzinler);
             try
             {
                 _filtreYukleniyor = true;

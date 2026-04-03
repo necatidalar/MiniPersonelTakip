@@ -6,7 +6,7 @@ using MiniPersonelTakip.Services.Abstract;
 
 namespace MiniPersonelTakip
 {
-    public partial class frm_PersonelTakip : Form
+    public partial class frm_PersonelYonetimi : Form
     {
         private readonly IPersonelService _personelService;
         private readonly ILookupService _lookupService;
@@ -16,7 +16,7 @@ namespace MiniPersonelTakip
         private bool _listelemeDevamEdiyor = false;
         private CancellationTokenSource? _aramaCts;
 
-        public frm_PersonelTakip(
+        public frm_PersonelYonetimi(
             IPersonelService personelService,
             ILookupService lookupService,
             IServiceProvider serviceProvider)
@@ -29,24 +29,27 @@ namespace MiniPersonelTakip
 
         private async void frm_MiniPersonelTakip_Load(object sender, EventArgs e)
         {
-            UiTheme.StylePage(this);
-            UiTheme.StyleSurface(pnlTop);
-            UiTheme.StyleSurface(pnlRight);
-            UiTheme.StyleGrid(dgvPersoneller);
-
-            UiTheme.StyleTextBox(txtArama);
-            UiTheme.StyleComboBox(cmbDepartmanFiltre);
-            UiTheme.StyleComboBox(cmbPozisyonFiltre);
-            UiTheme.StyleCheckBox(chkSadeceAktifler);
-
-            UiTheme.StylePrimaryButton(btnAra);
-            UiTheme.StyleSuccessButton(btnEkle);
-            UiTheme.StyleWarningButton(btnDuzenle);
-            UiTheme.StyleDangerButton(btnSil);
-            UiTheme.StyleNeutralButton(btnYenile);
+            DataGridThemeManager.Apply(dgvPersoneller);
+            ConfigureResponsiveLayout();
 
             await FiltreleriYukleAsync();
             await ListeleAsync();
+        }
+
+        private void ConfigureResponsiveLayout()
+        {
+            txtArama.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            btnAra.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            chkSadeceAktifler.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            lblDepartmanFiltre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbDepartmanFiltre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblPozisyonFiltre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbPozisyonFiltre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
+            btnEkle.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnDuzenle.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnSil.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnYenile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         }
 
         private async Task FiltreleriYukleAsync()
@@ -266,10 +269,23 @@ namespace MiniPersonelTakip
 
         private async void btnYenile_Click(object sender, EventArgs e)
         {
-            btnYenile.Enabled = false;
-            await FiltreleriYukleAsync();
+            try
+            {
+                btnYenile.Enabled = false;
+                _filtreYukleniyor = true;
+
+                txtArama.Clear();
+                chkSadeceAktifler.Checked = true;
+                cmbDepartmanFiltre.SelectedIndex = 0;
+                cmbPozisyonFiltre.SelectedIndex = 0;
+            }
+            finally
+            {
+                _filtreYukleniyor = false;
+                btnYenile.Enabled = true;
+            }
+
             await ListeleAsync();
-            btnYenile.Enabled = true;
         }
 
         private async void btnEkle_Click(object sender, EventArgs e)
@@ -371,42 +387,6 @@ namespace MiniPersonelTakip
             {
                 MessageBox.Show(
                     $"Silme işlemi sırasında hata oluştu.\n\nDetay: {ex.Message}",
-                    "Hata",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnPersonelYonetimi_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using var scope = _serviceProvider.CreateScope();
-                var form = scope.ServiceProvider.GetRequiredService<frm_PersonelTakip>();
-                form.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(
-                    $"Personel yönetimi ekranı açılırken hata oluştu.\n\nDetay: {ex.Message}",
-                    "Hata",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnVardiyaYonetimi_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using var scope = _serviceProvider.CreateScope();
-                var form = scope.ServiceProvider.GetRequiredService<frm_VardiyaYonetimi>();
-                form.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(
-                    $"Vardiya yönetimi ekranı açılırken hata oluştu.\n\nDetay: {ex.Message}",
                     "Hata",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

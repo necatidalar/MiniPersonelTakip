@@ -65,7 +65,7 @@ namespace MiniPersonelTakip.Forms
             // 
             // pnlTop
             // 
-            pnlTop.BackColor = Color.WhiteSmoke;
+            pnlTop.BackColor = Color.FromArgb(28, 30, 38);
             pnlTop.Controls.Add(btnAra);
             pnlTop.Controls.Add(cmbDurumFiltre);
             pnlTop.Controls.Add(lblDurum);
@@ -90,19 +90,23 @@ namespace MiniPersonelTakip.Forms
             btnAra.BackColor = Color.FromArgb(52, 152, 219);
             btnAra.FlatAppearance.BorderSize = 0;
             btnAra.FlatStyle = FlatStyle.Flat;
-            btnAra.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnAra.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAra.ForeColor = Color.White;
             btnAra.Location = new Point(380, 62);
             btnAra.Name = "btnAra";
-            btnAra.Size = new Size(120, 32);
+            btnAra.Size = new Size(120, 30);
             btnAra.TabIndex = 12;
             btnAra.Text = "Ara";
             btnAra.UseVisualStyleBackColor = false;
             // 
             // cmbDurumFiltre
             // 
+            cmbDurumFiltre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbDurumFiltre.BackColor = Color.FromArgb(35, 38, 45);
             cmbDurumFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbDurumFiltre.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbDurumFiltre.FlatStyle = FlatStyle.Flat;
+            cmbDurumFiltre.Font = new Font("Segoe UI", 10F);
+            cmbDurumFiltre.ForeColor = Color.White;
             cmbDurumFiltre.FormattingEnabled = true;
             cmbDurumFiltre.Location = new Point(985, 21);
             cmbDurumFiltre.Name = "cmbDurumFiltre";
@@ -111,8 +115,10 @@ namespace MiniPersonelTakip.Forms
             // 
             // lblDurum
             // 
+            lblDurum.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDurum.AutoSize = true;
-            lblDurum.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblDurum.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblDurum.ForeColor = Color.FromArgb(170, 175, 185);
             lblDurum.Location = new Point(919, 24);
             lblDurum.Name = "lblDurum";
             lblDurum.Size = new Size(54, 19);
@@ -121,8 +127,12 @@ namespace MiniPersonelTakip.Forms
             // 
             // cmbIzinTuruFiltre
             // 
+            cmbIzinTuruFiltre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbIzinTuruFiltre.BackColor = Color.FromArgb(35, 38, 45);
             cmbIzinTuruFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbIzinTuruFiltre.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbIzinTuruFiltre.FlatStyle = FlatStyle.Flat;
+            cmbIzinTuruFiltre.Font = new Font("Segoe UI", 10F);
+            cmbIzinTuruFiltre.ForeColor = Color.White;
             cmbIzinTuruFiltre.FormattingEnabled = true;
             cmbIzinTuruFiltre.Location = new Point(699, 21);
             cmbIzinTuruFiltre.Name = "cmbIzinTuruFiltre";
@@ -131,8 +141,10 @@ namespace MiniPersonelTakip.Forms
             // 
             // lblIzinTuru
             // 
+            lblIzinTuru.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblIzinTuru.AutoSize = true;
-            lblIzinTuru.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblIzinTuru.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblIzinTuru.ForeColor = Color.FromArgb(170, 175, 185);
             lblIzinTuru.Location = new Point(624, 24);
             lblIzinTuru.Name = "lblIzinTuru";
             lblIzinTuru.Size = new Size(64, 19);
@@ -141,17 +153,18 @@ namespace MiniPersonelTakip.Forms
             // 
             // dtpBitis
             // 
-            dtpBitis.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpBitis.Font = new Font("Segoe UI", 9.5F);
             dtpBitis.Format = DateTimePickerFormat.Short;
             dtpBitis.Location = new Point(234, 66);
             dtpBitis.Name = "dtpBitis";
-            dtpBitis.Size = new Size(120, 25);
+            dtpBitis.Size = new Size(120, 24);
             dtpBitis.TabIndex = 7;
             // 
             // lblBitis
             // 
             lblBitis.AutoSize = true;
-            lblBitis.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblBitis.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBitis.ForeColor = Color.FromArgb(170, 175, 185);
             lblBitis.Location = new Point(190, 69);
             lblBitis.Name = "lblBitis";
             lblBitis.Size = new Size(37, 19);
@@ -160,27 +173,32 @@ namespace MiniPersonelTakip.Forms
             // 
             // dtpBaslangic
             // 
-            dtpBaslangic.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpBaslangic.Font = new Font("Segoe UI", 9.5F);
             dtpBaslangic.Format = DateTimePickerFormat.Short;
             dtpBaslangic.Location = new Point(80, 66);
             dtpBaslangic.Name = "dtpBaslangic";
-            dtpBaslangic.Size = new Size(100, 25);
+            dtpBaslangic.Size = new Size(100, 24);
             dtpBaslangic.TabIndex = 5;
             // 
             // lblBaslangic
             // 
             lblBaslangic.AutoSize = true;
-            lblBaslangic.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblBaslangic.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBaslangic.ForeColor = Color.FromArgb(170, 175, 185);
             lblBaslangic.Location = new Point(24, 69);
             lblBaslangic.Name = "lblBaslangic";
-            lblBaslangic.Size = new Size(50, 19);
+            lblBaslangic.Size = new Size(42, 19);
             lblBaslangic.TabIndex = 4;
             lblBaslangic.Text = "Tarih";
             // 
             // cmbPersonelFiltre
             // 
+            cmbPersonelFiltre.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbPersonelFiltre.BackColor = Color.FromArgb(35, 38, 45);
             cmbPersonelFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbPersonelFiltre.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbPersonelFiltre.FlatStyle = FlatStyle.Flat;
+            cmbPersonelFiltre.Font = new Font("Segoe UI", 10F);
+            cmbPersonelFiltre.ForeColor = Color.White;
             cmbPersonelFiltre.FormattingEnabled = true;
             cmbPersonelFiltre.Location = new Point(430, 21);
             cmbPersonelFiltre.Name = "cmbPersonelFiltre";
@@ -189,9 +207,11 @@ namespace MiniPersonelTakip.Forms
             // 
             // lblPersonel
             // 
+            lblPersonel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblPersonel.AutoSize = true;
-            lblPersonel.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            lblPersonel.Location = new Point(363, 24);
+            lblPersonel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblPersonel.ForeColor = Color.FromArgb(170, 175, 185);
+            lblPersonel.Location = new Point(350, 24);
             lblPersonel.Name = "lblPersonel";
             lblPersonel.Size = new Size(67, 19);
             lblPersonel.TabIndex = 2;
@@ -199,7 +219,10 @@ namespace MiniPersonelTakip.Forms
             // 
             // txtArama
             // 
-            txtArama.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtArama.BackColor = Color.FromArgb(35, 38, 45);
+            txtArama.BorderStyle = BorderStyle.FixedSingle;
+            txtArama.Font = new Font("Segoe UI", 10F);
+            txtArama.ForeColor = Color.White;
             txtArama.Location = new Point(90, 21);
             txtArama.Name = "txtArama";
             txtArama.PlaceholderText = "İzin türü veya açıklama ara...";
@@ -209,7 +232,8 @@ namespace MiniPersonelTakip.Forms
             // lblArama
             // 
             lblArama.AutoSize = true;
-            lblArama.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblArama.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblArama.ForeColor = Color.FromArgb(170, 175, 185);
             lblArama.Location = new Point(24, 24);
             lblArama.Name = "lblArama";
             lblArama.Size = new Size(54, 19);
@@ -218,7 +242,7 @@ namespace MiniPersonelTakip.Forms
             // 
             // pnlRight
             // 
-            pnlRight.BackColor = Color.WhiteSmoke;
+            pnlRight.BackColor = Color.FromArgb(24, 26, 33);
             pnlRight.Controls.Add(btnYenile);
             pnlRight.Controls.Add(btnSil);
             pnlRight.Controls.Add(btnDuzenle);
@@ -231,14 +255,14 @@ namespace MiniPersonelTakip.Forms
             // 
             // btnYenile
             // 
-            btnYenile.BackColor = Color.FromArgb(52, 73, 94);
+            btnYenile.BackColor = Color.FromArgb(44, 62, 80);
             btnYenile.FlatAppearance.BorderSize = 0;
             btnYenile.FlatStyle = FlatStyle.Flat;
-            btnYenile.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnYenile.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnYenile.ForeColor = Color.White;
             btnYenile.Location = new Point(20, 193);
             btnYenile.Name = "btnYenile";
-            btnYenile.Size = new Size(140, 40);
+            btnYenile.Size = new Size(140, 45);
             btnYenile.TabIndex = 3;
             btnYenile.Text = "Yenile";
             btnYenile.UseVisualStyleBackColor = false;
@@ -248,25 +272,25 @@ namespace MiniPersonelTakip.Forms
             btnSil.BackColor = Color.FromArgb(231, 76, 60);
             btnSil.FlatAppearance.BorderSize = 0;
             btnSil.FlatStyle = FlatStyle.Flat;
-            btnSil.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnSil.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnSil.ForeColor = Color.White;
             btnSil.Location = new Point(20, 139);
             btnSil.Name = "btnSil";
-            btnSil.Size = new Size(140, 40);
+            btnSil.Size = new Size(140, 45);
             btnSil.TabIndex = 2;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = false;
             // 
             // btnDuzenle
             // 
-            btnDuzenle.BackColor = Color.FromArgb(243, 156, 18);
+            btnDuzenle.BackColor = Color.FromArgb(220, 160, 30);
             btnDuzenle.FlatAppearance.BorderSize = 0;
             btnDuzenle.FlatStyle = FlatStyle.Flat;
-            btnDuzenle.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnDuzenle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnDuzenle.ForeColor = Color.White;
             btnDuzenle.Location = new Point(20, 85);
             btnDuzenle.Name = "btnDuzenle";
-            btnDuzenle.Size = new Size(140, 40);
+            btnDuzenle.Size = new Size(140, 45);
             btnDuzenle.TabIndex = 1;
             btnDuzenle.Text = "Düzenle";
             btnDuzenle.UseVisualStyleBackColor = false;
@@ -276,34 +300,51 @@ namespace MiniPersonelTakip.Forms
             btnEkle.BackColor = Color.FromArgb(46, 204, 113);
             btnEkle.FlatAppearance.BorderSize = 0;
             btnEkle.FlatStyle = FlatStyle.Flat;
-            btnEkle.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnEkle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnEkle.ForeColor = Color.White;
             btnEkle.Location = new Point(20, 31);
             btnEkle.Name = "btnEkle";
-            btnEkle.Size = new Size(140, 40);
+            btnEkle.Size = new Size(140, 45);
             btnEkle.TabIndex = 0;
             btnEkle.Text = "Yeni İzin";
             btnEkle.UseVisualStyleBackColor = false;
             // 
             // dgvIzinler
             // 
-            dgvIzinler.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvIzinler.BackgroundColor = Color.White;
+            dgvIzinler.AllowUserToAddRows = false;
+            dgvIzinler.AllowUserToDeleteRows = false;
+            dgvIzinler.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvIzinler.BackgroundColor = Color.FromArgb(20, 22, 27);
+            dgvIzinler.BorderStyle = BorderStyle.None;
+            dgvIzinler.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+
+            dgvIzinler.EnableHeadersVisualStyles = false;
+            dgvIzinler.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(35, 38, 45);
+            dgvIzinler.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvIzinler.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             dgvIzinler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvIzinler.Location = new Point(24, 132);
+
+            dgvIzinler.DefaultCellStyle.BackColor = Color.FromArgb(28, 30, 38);
+            dgvIzinler.DefaultCellStyle.ForeColor = Color.FromArgb(220, 230, 242);
+            dgvIzinler.DefaultCellStyle.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dgvIzinler.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvIzinler.GridColor = Color.FromArgb(45, 48, 55);
+            dgvIzinler.RowHeadersVisible = false;
+
+            dgvIzinler.Dock = DockStyle.Fill;
+            dgvIzinler.Location = new Point(0, 108);
             dgvIzinler.MultiSelect = false;
             dgvIzinler.Name = "dgvIzinler";
             dgvIzinler.ReadOnly = true;
-            dgvIzinler.RowHeadersWidth = 51;
             dgvIzinler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvIzinler.Size = new Size(1154, 563);
+            dgvIzinler.Size = new Size(1204, 613);
             dgvIzinler.TabIndex = 2;
             // 
             // frm_IzinYonetimi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 247, 250);
+            BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(1384, 721);
             Controls.Add(dgvIzinler);
             Controls.Add(pnlRight);

@@ -23,7 +23,6 @@ namespace MiniPersonelTakip.Forms
             _gorevService = gorevService;
             _lookupService = lookupService;
 
-            Load += frm_GorevDuzenle_Load;
             btnKaydet.Click += btnKaydet_Click;
             btnIptal.Click += (s, e) => DialogResult = DialogResult.Cancel;
             chkBitisTarihi.CheckedChanged += chkBitisTarihi_CheckedChanged;
@@ -34,11 +33,6 @@ namespace MiniPersonelTakip.Forms
 
         private async void frm_GorevDuzenle_Load(object? sender, EventArgs e)
         {
-            UiTheme.StyleDialog(this);
-            UiTheme.StyleInputs(this);
-
-            UiTheme.StylePrimaryButton(btnKaydet);
-            UiTheme.StyleNeutralButton(btnIptal);
             try
             {
                 await PersonelleriYukleAsync();

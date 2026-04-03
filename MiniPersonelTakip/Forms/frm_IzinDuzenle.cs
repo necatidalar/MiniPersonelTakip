@@ -22,7 +22,6 @@ namespace MiniPersonelTakip.Forms
             _izinService = izinService;
             _lookupService = lookupService;
 
-            Load += frm_IzinDuzenle_Load;
             dtpBaslangic.ValueChanged += Tarih_ValueChanged;
             dtpBitis.ValueChanged += Tarih_ValueChanged;
             btnKaydet.Click += btnKaydet_Click;
@@ -34,14 +33,6 @@ namespace MiniPersonelTakip.Forms
 
         private async void frm_IzinDuzenle_Load(object? sender, EventArgs e)
         {
-            UiTheme.StyleDialog(this);
-            UiTheme.StyleInputs(this);
-
-            lblGunSayisi.ForeColor = UiTheme.Primary;
-            lblGunSayisi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-
-            UiTheme.StylePrimaryButton(btnKaydet);
-            UiTheme.StyleNeutralButton(btnIptal);
             try
             {
                 await PersonelleriYukleAsync();
