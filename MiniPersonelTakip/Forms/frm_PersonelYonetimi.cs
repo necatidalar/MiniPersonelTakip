@@ -6,7 +6,7 @@ using MiniPersonelTakip.Services.Abstract;
 
 namespace MiniPersonelTakip
 {
-    public partial class frm_PersonelTakip : Form
+    public partial class frm_PersonelYonetimi : Form
     {
         private readonly IPersonelService _personelService;
         private readonly ILookupService _lookupService;
@@ -16,7 +16,7 @@ namespace MiniPersonelTakip
         private bool _listelemeDevamEdiyor = false;
         private CancellationTokenSource? _aramaCts;
 
-        public frm_PersonelTakip(
+        public frm_PersonelYonetimi(
             IPersonelService personelService,
             ILookupService lookupService,
             IServiceProvider serviceProvider)
@@ -29,22 +29,7 @@ namespace MiniPersonelTakip
 
         private async void frm_MiniPersonelTakip_Load(object sender, EventArgs e)
         {
-            UiTheme.StylePage(this);
-            UiTheme.StyleFilterPanel(pnlTop);
-            UiTheme.StyleActionPanel(pnlRight);
-            UiTheme.StyleGrid(dgvPersoneller);
-
-            UiTheme.StyleTextBox(txtArama);
-            UiTheme.StyleComboBox(cmbDepartmanFiltre);
-            UiTheme.StyleComboBox(cmbPozisyonFiltre);
-            UiTheme.StyleCheckBox(chkSadeceAktifler);
-
-            UiTheme.StylePrimaryButton(btnAra);
-            UiTheme.StyleSuccessButton(btnEkle);
-            UiTheme.StyleWarningButton(btnDuzenle);
-            UiTheme.StyleDangerButton(btnSil);
-            UiTheme.StyleNeutralButton(btnYenile);
-
+            DataGridThemeManager.Apply(dgvPersoneller);
             ConfigureResponsiveLayout();
 
             await FiltreleriYukleAsync();

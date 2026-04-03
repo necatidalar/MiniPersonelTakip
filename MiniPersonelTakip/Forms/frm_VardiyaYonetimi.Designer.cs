@@ -42,7 +42,7 @@
             // 
             // pnlTop
             // 
-            pnlTop.BackColor = Color.WhiteSmoke;
+            pnlTop.BackColor = Color.FromArgb(28, 30, 38);
             pnlTop.Controls.Add(btnAra);
             pnlTop.Controls.Add(cmbDurumFiltre);
             pnlTop.Controls.Add(lblDurum);
@@ -77,8 +77,11 @@
             // 
             // cmbDurumFiltre
             // 
+            cmbDurumFiltre.BackColor = Color.FromArgb(35, 38, 45);
             cmbDurumFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDurumFiltre.FlatStyle = FlatStyle.Flat;
             cmbDurumFiltre.Font = new Font("Segoe UI", 10F);
+            cmbDurumFiltre.ForeColor = Color.White;
             cmbDurumFiltre.FormattingEnabled = true;
             cmbDurumFiltre.Location = new Point(1012, 31);
             cmbDurumFiltre.Name = "cmbDurumFiltre";
@@ -90,6 +93,7 @@
             // 
             lblDurum.AutoSize = true;
             lblDurum.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblDurum.ForeColor = Color.FromArgb(170, 175, 185);
             lblDurum.Location = new Point(946, 34);
             lblDurum.Name = "lblDurum";
             lblDurum.Size = new Size(54, 19);
@@ -98,8 +102,11 @@
             // 
             // cmbVardiyaTipiFiltre
             // 
+            cmbVardiyaTipiFiltre.BackColor = Color.FromArgb(35, 38, 45);
             cmbVardiyaTipiFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbVardiyaTipiFiltre.FlatStyle = FlatStyle.Flat;
             cmbVardiyaTipiFiltre.Font = new Font("Segoe UI", 10F);
+            cmbVardiyaTipiFiltre.ForeColor = Color.White;
             cmbVardiyaTipiFiltre.FormattingEnabled = true;
             cmbVardiyaTipiFiltre.Location = new Point(744, 31);
             cmbVardiyaTipiFiltre.Name = "cmbVardiyaTipiFiltre";
@@ -111,6 +118,7 @@
             // 
             lblVardiyaTipi.AutoSize = true;
             lblVardiyaTipi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblVardiyaTipi.ForeColor = Color.FromArgb(170, 175, 185);
             lblVardiyaTipi.Location = new Point(647, 34);
             lblVardiyaTipi.Name = "lblVardiyaTipi";
             lblVardiyaTipi.Size = new Size(89, 19);
@@ -119,11 +127,11 @@
             // 
             // dtpBitisTarihi
             // 
-            dtpBitisTarihi.Font = new Font("Segoe UI", 10F);
+            dtpBitisTarihi.Font = new Font("Segoe UI", 9.5F);
             dtpBitisTarihi.Format = DateTimePickerFormat.Short;
             dtpBitisTarihi.Location = new Point(520, 31);
             dtpBitisTarihi.Name = "dtpBitisTarihi";
-            dtpBitisTarihi.Size = new Size(110, 25);
+            dtpBitisTarihi.Size = new Size(110, 24);
             dtpBitisTarihi.TabIndex = 5;
             dtpBitisTarihi.ValueChanged += dtpBitisTarihi_ValueChanged;
             // 
@@ -131,6 +139,7 @@
             // 
             lblBitis.AutoSize = true;
             lblBitis.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBitis.ForeColor = Color.FromArgb(170, 175, 185);
             lblBitis.Location = new Point(480, 34);
             lblBitis.Name = "lblBitis";
             lblBitis.Size = new Size(37, 19);
@@ -139,11 +148,11 @@
             // 
             // dtpBaslangicTarihi
             // 
-            dtpBaslangicTarihi.Font = new Font("Segoe UI", 10F);
+            dtpBaslangicTarihi.Font = new Font("Segoe UI", 9.5F);
             dtpBaslangicTarihi.Format = DateTimePickerFormat.Short;
             dtpBaslangicTarihi.Location = new Point(352, 31);
             dtpBaslangicTarihi.Name = "dtpBaslangicTarihi";
-            dtpBaslangicTarihi.Size = new Size(110, 25);
+            dtpBaslangicTarihi.Size = new Size(110, 24);
             dtpBaslangicTarihi.TabIndex = 3;
             dtpBaslangicTarihi.ValueChanged += dtpBaslangicTarihi_ValueChanged;
             // 
@@ -151,6 +160,7 @@
             // 
             lblBaslangic.AutoSize = true;
             lblBaslangic.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblBaslangic.ForeColor = Color.FromArgb(170, 175, 185);
             lblBaslangic.Location = new Point(274, 34);
             lblBaslangic.Name = "lblBaslangic";
             lblBaslangic.Size = new Size(72, 19);
@@ -159,8 +169,11 @@
             // 
             // cmbPersonelFiltre
             // 
+            cmbPersonelFiltre.BackColor = Color.FromArgb(35, 38, 45);
             cmbPersonelFiltre.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPersonelFiltre.FlatStyle = FlatStyle.Flat;
             cmbPersonelFiltre.Font = new Font("Segoe UI", 10F);
+            cmbPersonelFiltre.ForeColor = Color.White;
             cmbPersonelFiltre.FormattingEnabled = true;
             cmbPersonelFiltre.Location = new Point(91, 31);
             cmbPersonelFiltre.Name = "cmbPersonelFiltre";
@@ -172,6 +185,7 @@
             // 
             lblPersonel.AutoSize = true;
             lblPersonel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblPersonel.ForeColor = Color.FromArgb(170, 175, 185);
             lblPersonel.Location = new Point(24, 34);
             lblPersonel.Name = "lblPersonel";
             lblPersonel.Size = new Size(67, 19);
@@ -180,7 +194,7 @@
             // 
             // pnlRight
             // 
-            pnlRight.BackColor = Color.WhiteSmoke;
+            pnlRight.BackColor = Color.FromArgb(24, 26, 33);
             pnlRight.Controls.Add(btnYenile);
             pnlRight.Controls.Add(btnSil);
             pnlRight.Controls.Add(btnDuzenle);
@@ -193,14 +207,14 @@
             // 
             // btnYenile
             // 
-            btnYenile.BackColor = Color.FromArgb(52, 73, 94);
+            btnYenile.BackColor = Color.FromArgb(44, 62, 80);
             btnYenile.FlatAppearance.BorderSize = 0;
             btnYenile.FlatStyle = FlatStyle.Flat;
             btnYenile.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnYenile.ForeColor = Color.White;
             btnYenile.Location = new Point(20, 193);
             btnYenile.Name = "btnYenile";
-            btnYenile.Size = new Size(140, 40);
+            btnYenile.Size = new Size(140, 45);
             btnYenile.TabIndex = 3;
             btnYenile.Text = "Yenile";
             btnYenile.UseVisualStyleBackColor = false;
@@ -215,7 +229,7 @@
             btnSil.ForeColor = Color.White;
             btnSil.Location = new Point(20, 139);
             btnSil.Name = "btnSil";
-            btnSil.Size = new Size(140, 40);
+            btnSil.Size = new Size(140, 45);
             btnSil.TabIndex = 2;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = false;
@@ -223,14 +237,14 @@
             // 
             // btnDuzenle
             // 
-            btnDuzenle.BackColor = Color.FromArgb(243, 156, 18);
+            btnDuzenle.BackColor = Color.FromArgb(220, 160, 30);
             btnDuzenle.FlatAppearance.BorderSize = 0;
             btnDuzenle.FlatStyle = FlatStyle.Flat;
             btnDuzenle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnDuzenle.ForeColor = Color.White;
             btnDuzenle.Location = new Point(20, 85);
             btnDuzenle.Name = "btnDuzenle";
-            btnDuzenle.Size = new Size(140, 40);
+            btnDuzenle.Size = new Size(140, 45);
             btnDuzenle.TabIndex = 1;
             btnDuzenle.Text = "Düzenle";
             btnDuzenle.UseVisualStyleBackColor = false;
@@ -245,7 +259,7 @@
             btnEkle.ForeColor = Color.White;
             btnEkle.Location = new Point(20, 31);
             btnEkle.Name = "btnEkle";
-            btnEkle.Size = new Size(140, 40);
+            btnEkle.Size = new Size(140, 45);
             btnEkle.TabIndex = 0;
             btnEkle.Text = "Yeni Vardiya";
             btnEkle.UseVisualStyleBackColor = false;
@@ -253,13 +267,35 @@
             // 
             // dgvVardiyalar
             // 
-            dgvVardiyalar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvVardiyalar.BackgroundColor = Color.White;
+            dgvVardiyalar.AllowUserToAddRows = false;
+            dgvVardiyalar.AllowUserToDeleteRows = false;
+            dgvVardiyalar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvVardiyalar.BackgroundColor = Color.FromArgb(20, 22, 27);
+            dgvVardiyalar.BorderStyle = BorderStyle.None;
+            dgvVardiyalar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+
+            // Özel Header Tasarımı (Dark Mode İçin Kritik)
+            dgvVardiyalar.EnableHeadersVisualStyles = false;
+            dgvVardiyalar.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(35, 38, 45);
+            dgvVardiyalar.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvVardiyalar.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             dgvVardiyalar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVardiyalar.Location = new Point(24, 111);
+
+            // Satır Tasarımı
+            dgvVardiyalar.DefaultCellStyle.BackColor = Color.FromArgb(28, 30, 38);
+            dgvVardiyalar.DefaultCellStyle.ForeColor = Color.FromArgb(220, 230, 242);
+            dgvVardiyalar.DefaultCellStyle.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dgvVardiyalar.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvVardiyalar.GridColor = Color.FromArgb(45, 48, 55);
+            dgvVardiyalar.RowHeadersVisible = false;
+
+            dgvVardiyalar.Dock = DockStyle.Fill;
+            dgvVardiyalar.Location = new Point(0, 88);
+            dgvVardiyalar.MultiSelect = false;
             dgvVardiyalar.Name = "dgvVardiyalar";
-            dgvVardiyalar.RowHeadersWidth = 51;
-            dgvVardiyalar.Size = new Size(1154, 584);
+            dgvVardiyalar.ReadOnly = true;
+            dgvVardiyalar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvVardiyalar.Size = new Size(1204, 633);
             dgvVardiyalar.TabIndex = 2;
             dgvVardiyalar.CellDoubleClick += dgvVardiyalar_CellDoubleClick;
             // 
@@ -267,7 +303,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 247, 250);
+            BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(1384, 721);
             Controls.Add(dgvVardiyalar);
             Controls.Add(pnlRight);

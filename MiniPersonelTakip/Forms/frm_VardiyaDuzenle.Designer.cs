@@ -65,6 +65,7 @@ namespace MiniPersonelTakip
             // 
             lblPersonel.AutoSize = true;
             lblPersonel.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblPersonel.ForeColor = Color.FromArgb(170, 175, 185);
             lblPersonel.Location = new Point(32, 28);
             lblPersonel.Name = "lblPersonel";
             lblPersonel.Size = new Size(67, 19);
@@ -74,8 +75,11 @@ namespace MiniPersonelTakip
             // cmbPersonel
             // 
             cmbPersonel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbPersonel.BackColor = Color.FromArgb(35, 38, 45);
             cmbPersonel.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPersonel.FlatStyle = FlatStyle.Flat;
             cmbPersonel.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbPersonel.ForeColor = Color.White;
             cmbPersonel.FormattingEnabled = true;
             cmbPersonel.Location = new Point(32, 50);
             cmbPersonel.Name = "cmbPersonel";
@@ -86,6 +90,7 @@ namespace MiniPersonelTakip
             // 
             lblTarih.AutoSize = true;
             lblTarih.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblTarih.ForeColor = Color.FromArgb(170, 175, 185);
             lblTarih.Location = new Point(32, 92);
             lblTarih.Name = "lblTarih";
             lblTarih.Size = new Size(42, 19);
@@ -94,27 +99,132 @@ namespace MiniPersonelTakip
             // 
             // dtpTarih
             // 
-            dtpTarih.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpTarih.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 162);
             dtpTarih.Format = DateTimePickerFormat.Short;
             dtpTarih.Location = new Point(32, 114);
             dtpTarih.Name = "dtpTarih";
-            dtpTarih.Size = new Size(150, 25);
+            dtpTarih.Size = new Size(150, 24);
             dtpTarih.TabIndex = 3;
+            // 
+            // lblPlanlananGiris
+            // 
+            lblPlanlananGiris.AutoSize = true;
+            lblPlanlananGiris.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblPlanlananGiris.ForeColor = Color.FromArgb(170, 175, 185);
+            lblPlanlananGiris.Location = new Point(32, 160);
+            lblPlanlananGiris.Name = "lblPlanlananGiris";
+            lblPlanlananGiris.Size = new Size(108, 19);
+            lblPlanlananGiris.TabIndex = 8;
+            lblPlanlananGiris.Text = "Planlanan Giriş";
+            // 
+            // dtpPlanlananGiris
+            // 
+            dtpPlanlananGiris.CustomFormat = "HH:mm";
+            dtpPlanlananGiris.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpPlanlananGiris.Format = DateTimePickerFormat.Custom;
+            dtpPlanlananGiris.Location = new Point(32, 182);
+            dtpPlanlananGiris.Name = "dtpPlanlananGiris";
+            dtpPlanlananGiris.ShowUpDown = true;
+            dtpPlanlananGiris.Size = new Size(160, 24);
+            dtpPlanlananGiris.TabIndex = 9;
+            // 
+            // lblPlanlananCikis
+            // 
+            lblPlanlananCikis.AutoSize = true;
+            lblPlanlananCikis.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblPlanlananCikis.ForeColor = Color.FromArgb(170, 175, 185);
+            lblPlanlananCikis.Location = new Point(212, 160);
+            lblPlanlananCikis.Name = "lblPlanlananCikis";
+            lblPlanlananCikis.Size = new Size(109, 19);
+            lblPlanlananCikis.TabIndex = 10;
+            lblPlanlananCikis.Text = "Planlanan Çıkış";
+            // 
+            // dtpPlanlananCikis
+            // 
+            dtpPlanlananCikis.CustomFormat = "HH:mm";
+            dtpPlanlananCikis.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpPlanlananCikis.Format = DateTimePickerFormat.Custom;
+            dtpPlanlananCikis.Location = new Point(212, 182);
+            dtpPlanlananCikis.Name = "dtpPlanlananCikis";
+            dtpPlanlananCikis.ShowUpDown = true;
+            dtpPlanlananCikis.Size = new Size(160, 24);
+            dtpPlanlananCikis.TabIndex = 11;
+            // 
+            // chkGercekSaatlerGirilsin
+            // 
+            chkGercekSaatlerGirilsin.AutoSize = true;
+            chkGercekSaatlerGirilsin.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            chkGercekSaatlerGirilsin.ForeColor = Color.FromArgb(170, 175, 185);
+            chkGercekSaatlerGirilsin.Location = new Point(32, 228);
+            chkGercekSaatlerGirilsin.Name = "chkGercekSaatlerGirilsin";
+            chkGercekSaatlerGirilsin.Size = new Size(157, 23);
+            chkGercekSaatlerGirilsin.TabIndex = 12;
+            chkGercekSaatlerGirilsin.Text = "Gerçek saatler girilsin";
+            chkGercekSaatlerGirilsin.UseVisualStyleBackColor = true;
+            chkGercekSaatlerGirilsin.CheckedChanged += chkGercekSaatlerGirilsin_CheckedChanged;
+            // 
+            // lblGercekGiris
+            // 
+            lblGercekGiris.AutoSize = true;
+            lblGercekGiris.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblGercekGiris.ForeColor = Color.FromArgb(170, 175, 185);
+            lblGercekGiris.Location = new Point(32, 268);
+            lblGercekGiris.Name = "lblGercekGiris";
+            lblGercekGiris.Size = new Size(90, 19);
+            lblGercekGiris.TabIndex = 13;
+            lblGercekGiris.Text = "Gerçek Giriş";
+            // 
+            // dtpGercekGiris
+            // 
+            dtpGercekGiris.CustomFormat = "HH:mm";
+            dtpGercekGiris.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpGercekGiris.Format = DateTimePickerFormat.Custom;
+            dtpGercekGiris.Location = new Point(32, 290);
+            dtpGercekGiris.Name = "dtpGercekGiris";
+            dtpGercekGiris.ShowUpDown = true;
+            dtpGercekGiris.Size = new Size(160, 24);
+            dtpGercekGiris.TabIndex = 14;
+            // 
+            // lblGercekCikis
+            // 
+            lblGercekCikis.AutoSize = true;
+            lblGercekCikis.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblGercekCikis.ForeColor = Color.FromArgb(170, 175, 185);
+            lblGercekCikis.Location = new Point(212, 268);
+            lblGercekCikis.Name = "lblGercekCikis";
+            lblGercekCikis.Size = new Size(91, 19);
+            lblGercekCikis.TabIndex = 15;
+            lblGercekCikis.Text = "Gerçek Çıkış";
+            // 
+            // dtpGercekCikis
+            // 
+            dtpGercekCikis.CustomFormat = "HH:mm";
+            dtpGercekCikis.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            dtpGercekCikis.Format = DateTimePickerFormat.Custom;
+            dtpGercekCikis.Location = new Point(212, 290);
+            dtpGercekCikis.Name = "dtpGercekCikis";
+            dtpGercekCikis.ShowUpDown = true;
+            dtpGercekCikis.Size = new Size(160, 24);
+            dtpGercekCikis.TabIndex = 16;
             // 
             // lblVardiyaTipi
             // 
             lblVardiyaTipi.AutoSize = true;
             lblVardiyaTipi.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblVardiyaTipi.ForeColor = Color.FromArgb(170, 175, 185);
             lblVardiyaTipi.Location = new Point(212, 92);
             lblVardiyaTipi.Name = "lblVardiyaTipi";
-            lblVardiyaTipi.Size = new Size(105, 19);
+            lblVardiyaTipi.Size = new Size(89, 19);
             lblVardiyaTipi.TabIndex = 4;
             lblVardiyaTipi.Text = "Vardiya Tipi";
             // 
             // cmbVardiyaTipi
             // 
+            cmbVardiyaTipi.BackColor = Color.FromArgb(35, 38, 45);
             cmbVardiyaTipi.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbVardiyaTipi.FlatStyle = FlatStyle.Flat;
             cmbVardiyaTipi.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbVardiyaTipi.ForeColor = Color.White;
             cmbVardiyaTipi.FormattingEnabled = true;
             cmbVardiyaTipi.Location = new Point(212, 114);
             cmbVardiyaTipi.Name = "cmbVardiyaTipi";
@@ -125,6 +235,7 @@ namespace MiniPersonelTakip
             // 
             lblDurum.AutoSize = true;
             lblDurum.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblDurum.ForeColor = Color.FromArgb(170, 175, 185);
             lblDurum.Location = new Point(458, 92);
             lblDurum.Name = "lblDurum";
             lblDurum.Size = new Size(54, 19);
@@ -133,102 +244,22 @@ namespace MiniPersonelTakip
             // 
             // cmbDurum
             // 
+            cmbDurum.BackColor = Color.FromArgb(35, 38, 45);
             cmbDurum.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDurum.FlatStyle = FlatStyle.Flat;
             cmbDurum.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            cmbDurum.ForeColor = Color.White;
             cmbDurum.FormattingEnabled = true;
             cmbDurum.Location = new Point(458, 114);
             cmbDurum.Name = "cmbDurum";
             cmbDurum.Size = new Size(270, 25);
             cmbDurum.TabIndex = 7;
             // 
-            // lblPlanlananGiris
-            // 
-            lblPlanlananGiris.AutoSize = true;
-            lblPlanlananGiris.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            lblPlanlananGiris.Location = new Point(32, 160);
-            lblPlanlananGiris.Name = "lblPlanlananGiris";
-            lblPlanlananGiris.Size = new Size(127, 19);
-            lblPlanlananGiris.TabIndex = 8;
-            lblPlanlananGiris.Text = "Planlanan Giriş";
-            // 
-            // dtpPlanlananGiris
-            // 
-            dtpPlanlananGiris.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            dtpPlanlananGiris.Location = new Point(32, 182);
-            dtpPlanlananGiris.Name = "dtpPlanlananGiris";
-            dtpPlanlananGiris.Size = new Size(160, 25);
-            dtpPlanlananGiris.TabIndex = 9;
-            // 
-            // lblPlanlananCikis
-            // 
-            lblPlanlananCikis.AutoSize = true;
-            lblPlanlananCikis.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            lblPlanlananCikis.Location = new Point(212, 160);
-            lblPlanlananCikis.Name = "lblPlanlananCikis";
-            lblPlanlananCikis.Size = new Size(128, 19);
-            lblPlanlananCikis.TabIndex = 10;
-            lblPlanlananCikis.Text = "Planlanan Çıkış";
-            // 
-            // dtpPlanlananCikis
-            // 
-            dtpPlanlananCikis.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            dtpPlanlananCikis.Location = new Point(212, 182);
-            dtpPlanlananCikis.Name = "dtpPlanlananCikis";
-            dtpPlanlananCikis.Size = new Size(160, 25);
-            dtpPlanlananCikis.TabIndex = 11;
-            // 
-            // chkGercekSaatlerGirilsin
-            // 
-            chkGercekSaatlerGirilsin.AutoSize = true;
-            chkGercekSaatlerGirilsin.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            chkGercekSaatlerGirilsin.Location = new Point(32, 228);
-            chkGercekSaatlerGirilsin.Name = "chkGercekSaatlerGirilsin";
-            chkGercekSaatlerGirilsin.Size = new Size(187, 23);
-            chkGercekSaatlerGirilsin.TabIndex = 12;
-            chkGercekSaatlerGirilsin.Text = "Gerçek saatler girilsin";
-            chkGercekSaatlerGirilsin.UseVisualStyleBackColor = true;
-            chkGercekSaatlerGirilsin.CheckedChanged += chkGercekSaatlerGirilsin_CheckedChanged;
-            // 
-            // lblGercekGiris
-            // 
-            lblGercekGiris.AutoSize = true;
-            lblGercekGiris.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            lblGercekGiris.Location = new Point(32, 268);
-            lblGercekGiris.Name = "lblGercekGiris";
-            lblGercekGiris.Size = new Size(109, 19);
-            lblGercekGiris.TabIndex = 13;
-            lblGercekGiris.Text = "Gerçek Giriş";
-            // 
-            // dtpGercekGiris
-            // 
-            dtpGercekGiris.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            dtpGercekGiris.Location = new Point(32, 290);
-            dtpGercekGiris.Name = "dtpGercekGiris";
-            dtpGercekGiris.Size = new Size(160, 25);
-            dtpGercekGiris.TabIndex = 14;
-            // 
-            // lblGercekCikis
-            // 
-            lblGercekCikis.AutoSize = true;
-            lblGercekCikis.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            lblGercekCikis.Location = new Point(212, 268);
-            lblGercekCikis.Name = "lblGercekCikis";
-            lblGercekCikis.Size = new Size(110, 19);
-            lblGercekCikis.TabIndex = 15;
-            lblGercekCikis.Text = "Gerçek Çıkış";
-            // 
-            // dtpGercekCikis
-            // 
-            dtpGercekCikis.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            dtpGercekCikis.Location = new Point(212, 290);
-            dtpGercekCikis.Name = "dtpGercekCikis";
-            dtpGercekCikis.Size = new Size(160, 25);
-            dtpGercekCikis.TabIndex = 16;
-            // 
             // lblAciklama
             // 
             lblAciklama.AutoSize = true;
             lblAciklama.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lblAciklama.ForeColor = Color.FromArgb(170, 175, 185);
             lblAciklama.Location = new Point(32, 340);
             lblAciklama.Name = "lblAciklama";
             lblAciklama.Size = new Size(71, 19);
@@ -238,7 +269,10 @@ namespace MiniPersonelTakip
             // txtAciklama
             // 
             txtAciklama.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtAciklama.BackColor = Color.FromArgb(35, 38, 45);
+            txtAciklama.BorderStyle = BorderStyle.FixedSingle;
             txtAciklama.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            txtAciklama.ForeColor = Color.White;
             txtAciklama.Location = new Point(32, 362);
             txtAciklama.Multiline = true;
             txtAciklama.Name = "txtAciklama";
@@ -265,7 +299,7 @@ namespace MiniPersonelTakip
             // btnIptal
             // 
             btnIptal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnIptal.BackColor = Color.FromArgb(149, 165, 166);
+            btnIptal.BackColor = Color.FromArgb(44, 62, 80);
             btnIptal.FlatAppearance.BorderSize = 0;
             btnIptal.FlatStyle = FlatStyle.Flat;
             btnIptal.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 162);
@@ -282,7 +316,7 @@ namespace MiniPersonelTakip
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(760, 540);
             Controls.Add(btnIptal);
             Controls.Add(btnKaydet);

@@ -7,16 +7,7 @@ namespace MiniPersonelTakip
     public partial class frmMain : Form
     {
         private readonly IServiceProvider _serviceProvider;
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            UiTheme.StylePage(this);
-
-            UiTheme.StyleSidebarButton(btnPersonelYonetimi, UiTheme.Primary);
-            UiTheme.StyleSidebarButton(btnVardiyaYonetimi, UiTheme.Success);
-            UiTheme.StyleSidebarButton(btnIzinYonetimi, UiTheme.Secondary);
-            UiTheme.StyleSidebarButton(btnGorevYonetimi, UiTheme.Warning);
-        }
+        private IServiceScope? _currentScope;
 
         public frmMain(IServiceProvider serviceProvider)
         {
@@ -24,64 +15,75 @@ namespace MiniPersonelTakip
             _serviceProvider = serviceProvider;
         }
 
-        private void OpenMdiChild<TForm>() where TForm : Form
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            OpenFormInPanel<frm_PersonelYonetimi>();
+        }
+
+        private void OpenFormInPanel<TForm>() where TForm : Form
         {
             try
             {
-                foreach (Form child in MdiChildren)
+                if (pnlContainer.Controls.Count > 0 && pnlContainer.Controls[0] is TForm)
                 {
-                    if (child is TForm)
-                    {
-                        child.Activate();
-                        child.WindowState = FormWindowState.Maximized;
-                        return;
-                    }
+                    return;
                 }
 
-                var scope = _serviceProvider.CreateScope();
-                var form = scope.ServiceProvider.GetRequiredService<TForm>();
+                if (pnlContainer.Controls.Count > 0)
+                {
+                    var existingForm = pnlContainer.Controls[0] as Form;
+                    existingForm?.Close();
+                    existingForm?.Dispose();
+                    pnlContainer.Controls.Clear();
+                }
 
-                form.MdiParent = this;
-                form.StartPosition = FormStartPosition.Manual;
-                form.WindowState = FormWindowState.Maximized;
+                _currentScope?.Dispose();
+                _currentScope = _serviceProvider.CreateScope();
 
-                form.FormClosed += (_, __) => scope.Dispose();
+                var form = _currentScope.ServiceProvider.GetRequiredService<TForm>();
+                form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
 
+                pnlContainer.Controls.Add(form);
+                pnlContainer.Tag = form;
                 form.Show();
+                form.BringToFront();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    $"Form açılırken hata oluştu.\n\nDetay: {ex.Message}",
-                    "Hata",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show($"Form açılırken hata oluştu. Detay: { ExceptionHelper.GetFullMessage(ex)}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            _currentScope?.Dispose();
+            base.OnFormClosed(e);
         }
 
         private void btnPersonelYonetimi_Click(object sender, EventArgs e)
         {
-            OpenMdiChild<frm_PersonelTakip>();
+            OpenFormInPanel<frm_PersonelYonetimi>();
         }
 
         private void btnGorevYonetimi_Click(object sender, EventArgs e)
         {
-            OpenMdiChild<frm_GorevYonetimi>();
+            OpenFormInPanel<frm_GorevYonetimi>();
         }
 
         private void btnVardiyaYonetimi_Click(object sender, EventArgs e)
         {
-            OpenMdiChild<frm_VardiyaYonetimi>();
+            OpenFormInPanel<frm_VardiyaYonetimi>();
         }
 
         private void btnIzinYonetimi_Click(object sender, EventArgs e)
         {
-            OpenMdiChild<frm_IzinYonetimi>();
+            OpenFormInPanel<frm_IzinYonetimi>();
         }
 
         private void pnlTop_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

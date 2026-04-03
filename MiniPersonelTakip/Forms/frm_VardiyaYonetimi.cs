@@ -28,16 +28,7 @@ namespace MiniPersonelTakip
 
         private async void frm_VardiyaYonetimi_Load(object sender, EventArgs e)
         {
-            UiTheme.StylePage(this);
-            UiTheme.StyleSurface(pnlTop);
-            UiTheme.StyleSurface(pnlRight);
-            UiTheme.StyleGrid(dgvVardiyalar);
-
-            UiTheme.StylePrimaryButton(btnAra);
-            UiTheme.StyleSuccessButton(btnEkle);
-            UiTheme.StyleWarningButton(btnDuzenle);
-            UiTheme.StyleDangerButton(btnSil);
-            UiTheme.StyleNeutralButton(btnYenile);
+            DataGridThemeManager.Apply(dgvVardiyalar);
             try
             {
                 _filtreYukleniyor = true;
