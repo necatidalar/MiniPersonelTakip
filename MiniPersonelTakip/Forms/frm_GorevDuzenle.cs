@@ -1,5 +1,6 @@
 ﻿using MiniPersonelTakip.DTOs.Common;
 using MiniPersonelTakip.DTOs.Gorev;
+using MiniPersonelTakip.Helpers;
 using MiniPersonelTakip.Services.Abstract;
 using System.ComponentModel;
 
@@ -33,6 +34,11 @@ namespace MiniPersonelTakip.Forms
 
         private async void frm_GorevDuzenle_Load(object? sender, EventArgs e)
         {
+            UiTheme.StyleDialog(this);
+            UiTheme.StyleInputs(this);
+
+            UiTheme.StylePrimaryButton(btnKaydet);
+            UiTheme.StyleNeutralButton(btnIptal);
             try
             {
                 await PersonelleriYukleAsync();

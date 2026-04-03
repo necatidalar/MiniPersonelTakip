@@ -1,6 +1,6 @@
 ﻿    namespace MiniPersonelTakip
 {
-    partial class frm_MiniPersonelTakip
+    partial class frm_PersonelTakip
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -16,7 +16,7 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MiniPersonelTakip));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PersonelTakip));
             pnlTop = new Panel();
             cmbPozisyonFiltre = new ComboBox();
             lblPozisyonFiltre = new Label();
@@ -237,7 +237,7 @@
             dgvPersoneller.TabIndex = 2;
             dgvPersoneller.CellDoubleClick += dgvPersoneller_CellDoubleClick;
             // 
-            // frm_MiniPersonelTakip
+            // frm_PersonelTakip
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -246,9 +246,10 @@
             Controls.Add(dgvPersoneller);
             Controls.Add(pnlRight);
             Controls.Add(pnlTop);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(1200, 700);
-            Name = "frm_MiniPersonelTakip";
+            Name = "frm_PersonelTakip";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Personel Yönetimi";
             Load += frm_MiniPersonelTakip_Load;

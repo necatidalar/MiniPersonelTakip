@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MiniPersonelTakip.DTOs.Common;
 using MiniPersonelTakip.DTOs.Gorev;
+using MiniPersonelTakip.Helpers;
 using MiniPersonelTakip.Services.Abstract;
 
 namespace MiniPersonelTakip.Forms
@@ -44,6 +45,20 @@ namespace MiniPersonelTakip.Forms
 
         private async void frm_GorevYonetimi_Load(object? sender, EventArgs e)
         {
+            UiTheme.StylePage(this);
+            UiTheme.StyleSurface(pnlTop);
+            UiTheme.StyleGrid(dgvGorevler);
+
+            UiTheme.StyleTextBox(txtArama);
+            UiTheme.StyleComboBox(cmbPersonelFiltre);
+            UiTheme.StyleComboBox(cmbOncelikFiltre);
+            UiTheme.StyleComboBox(cmbDurumFiltre);
+
+            UiTheme.StylePrimaryButton(btnAra);
+            UiTheme.StyleNeutralButton(btnYenile);
+            UiTheme.StyleSuccessButton(btnEkle);
+            UiTheme.StyleWarningButton(btnDuzenle);
+            UiTheme.StyleDangerButton(btnSil);
             try
             {
                 _filtreYukleniyor = true;

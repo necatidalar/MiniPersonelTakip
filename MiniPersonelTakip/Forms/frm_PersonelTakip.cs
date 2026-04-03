@@ -1,11 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MiniPersonelTakip.DTOs.Common;
 using MiniPersonelTakip.DTOs.Personel;
+using MiniPersonelTakip.Helpers;
 using MiniPersonelTakip.Services.Abstract;
 
 namespace MiniPersonelTakip
 {
-    public partial class frm_MiniPersonelTakip : Form
+    public partial class frm_PersonelTakip : Form
     {
         private readonly IPersonelService _personelService;
         private readonly ILookupService _lookupService;
@@ -15,7 +16,7 @@ namespace MiniPersonelTakip
         private bool _listelemeDevamEdiyor = false;
         private CancellationTokenSource? _aramaCts;
 
-        public frm_MiniPersonelTakip(
+        public frm_PersonelTakip(
             IPersonelService personelService,
             ILookupService lookupService,
             IServiceProvider serviceProvider)
@@ -28,6 +29,22 @@ namespace MiniPersonelTakip
 
         private async void frm_MiniPersonelTakip_Load(object sender, EventArgs e)
         {
+            UiTheme.StylePage(this);
+            UiTheme.StyleSurface(pnlTop);
+            UiTheme.StyleSurface(pnlRight);
+            UiTheme.StyleGrid(dgvPersoneller);
+
+            UiTheme.StyleTextBox(txtArama);
+            UiTheme.StyleComboBox(cmbDepartmanFiltre);
+            UiTheme.StyleComboBox(cmbPozisyonFiltre);
+            UiTheme.StyleCheckBox(chkSadeceAktifler);
+
+            UiTheme.StylePrimaryButton(btnAra);
+            UiTheme.StyleSuccessButton(btnEkle);
+            UiTheme.StyleWarningButton(btnDuzenle);
+            UiTheme.StyleDangerButton(btnSil);
+            UiTheme.StyleNeutralButton(btnYenile);
+
             await FiltreleriYukleAsync();
             await ListeleAsync();
         }
@@ -365,7 +382,7 @@ namespace MiniPersonelTakip
             try
             {
                 using var scope = _serviceProvider.CreateScope();
-                var form = scope.ServiceProvider.GetRequiredService<frm_MiniPersonelTakip>();
+                var form = scope.ServiceProvider.GetRequiredService<frm_PersonelTakip>();
                 form.ShowDialog();
             }
             catch (Exception ex)

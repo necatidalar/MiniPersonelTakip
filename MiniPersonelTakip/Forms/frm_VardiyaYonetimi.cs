@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MiniPersonelTakip.DTOs.Common;
 using MiniPersonelTakip.DTOs.Vardiya;
+using MiniPersonelTakip.Helpers;
 using MiniPersonelTakip.Services.Abstract;
 
 namespace MiniPersonelTakip
@@ -27,6 +28,16 @@ namespace MiniPersonelTakip
 
         private async void frm_VardiyaYonetimi_Load(object sender, EventArgs e)
         {
+            UiTheme.StylePage(this);
+            UiTheme.StyleSurface(pnlTop);
+            UiTheme.StyleSurface(pnlRight);
+            UiTheme.StyleGrid(dgvVardiyalar);
+
+            UiTheme.StylePrimaryButton(btnAra);
+            UiTheme.StyleSuccessButton(btnEkle);
+            UiTheme.StyleWarningButton(btnDuzenle);
+            UiTheme.StyleDangerButton(btnSil);
+            UiTheme.StyleNeutralButton(btnYenile);
             try
             {
                 _filtreYukleniyor = true;

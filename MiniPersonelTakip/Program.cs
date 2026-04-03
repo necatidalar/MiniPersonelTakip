@@ -20,7 +20,7 @@ namespace MiniPersonelTakip
             var builder = Host.CreateApplicationBuilder();
 
             builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer("Server=DALAR;Database=PersonelTakipDB;User Id=sa;Password=Nd200528;Trusted_Connection=True; TrustServerCertificate=True;"));
+                options.UseSqlServer("Server=DALAR;Database=Sude_PersonelTakipDB;User Id=DALAR;Password=Nd200528;Trusted_Connection=True; TrustServerCertificate=True;"));
 
             builder.Services.AddScoped<IPersonelRepository, PersonelRepository>();
             builder.Services.AddScoped<IDepartmanRepository, DepartmanRepository>();
@@ -36,7 +36,7 @@ namespace MiniPersonelTakip
             builder.Services.AddScoped<IGorevService, GorevService>();
 
             builder.Services.AddTransient<frmMain>();
-            builder.Services.AddTransient<frm_MiniPersonelTakip>();
+            builder.Services.AddTransient<frm_PersonelTakip>();
             builder.Services.AddTransient<frm_PersonelDuzenle>();
             builder.Services.AddTransient<frm_VardiyaYonetimi>();
             builder.Services.AddTransient<frm_VardiyaDuzenle>();

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MiniPersonelTakip.DTOs.Common;
 using MiniPersonelTakip.DTOs.Izin;
+using MiniPersonelTakip.Helpers;
 using MiniPersonelTakip.Services.Abstract;
 
 namespace MiniPersonelTakip.Forms
@@ -74,6 +75,20 @@ namespace MiniPersonelTakip.Forms
 
         private async void frm_IzinYonetimi_Load(object? sender, EventArgs e)
         {
+            UiTheme.StylePage(this);
+            UiTheme.StyleSurface(pnlTop);
+            UiTheme.StyleGrid(dgvIzinler);
+
+            UiTheme.StyleTextBox(txtArama);
+            UiTheme.StyleComboBox(cmbPersonelFiltre);
+            UiTheme.StyleComboBox(cmbIzinTuruFiltre);
+            UiTheme.StyleComboBox(cmbDurumFiltre);
+
+            UiTheme.StylePrimaryButton(btnAra);
+            UiTheme.StyleNeutralButton(btnYenile);
+            UiTheme.StyleSuccessButton(btnEkle);
+            UiTheme.StyleWarningButton(btnDuzenle);
+            UiTheme.StyleDangerButton(btnSil);
             try
             {
                 _filtreYukleniyor = true;

@@ -272,6 +272,7 @@
             Controls.Add(dgvVardiyalar);
             Controls.Add(pnlRight);
             Controls.Add(pnlTop);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(1300, 700);
             Name = "frm_VardiyaYonetimi";
