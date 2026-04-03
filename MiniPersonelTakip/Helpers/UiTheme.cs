@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace MiniPersonelTakip.Helpers
@@ -42,6 +43,12 @@ namespace MiniPersonelTakip.Helpers
         {
             panel.BackColor = Surface;
             panel.Padding = new Padding(14);
+        }
+
+        public static void StyleActionPanel(Panel panel)
+        {
+            panel.BackColor = Surface;
+            panel.Padding = new Padding(12);
         }
 
         public static void StyleTextBox(TextBox textBox)
@@ -142,9 +149,11 @@ namespace MiniPersonelTakip.Helpers
             grid.ReadOnly = true;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             grid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             grid.GridColor = Border;
             grid.EnableHeadersVisualStyles = false;
+            grid.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
 
             grid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             grid.ColumnHeadersHeight = 40;
@@ -162,6 +171,19 @@ namespace MiniPersonelTakip.Helpers
 
             grid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 250, 252);
             grid.RowTemplate.Height = 36;
+
+            try
+            {
+                typeof(DataGridView).InvokeMember(
+                    "DoubleBuffered",
+                    BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+                    null,
+                    grid,
+                    new object[] { true });
+            }
+            catch
+            {
+            }
         }
 
         public static void StyleDialog(Form form)
